@@ -1,6 +1,8 @@
 import regex as re
 import numpy as np
 from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+from sklearn.cluster import DBSCAN
 
 
 f = open("CoinToss.txt", "r")
@@ -56,14 +58,14 @@ def to_3_err(tpl):
         abs(tpl[3]-0.125) + abs(tpl[4]-0.125) + abs(tpl[5]-0.125) + \
         abs(tpl[6]-0.125) + abs(tpl[7]-0.125)
 
-def max_1_err(tpl):
+def get_max_1_err(tpl):
     return abs(tpl[0])-0.5
 
-def max_2_err(tpl):
+def get_max_2_err(tpl):
     return max(abs(tpl[0]-0.25), abs(tpl[1]-0.25), abs(tpl[2]-0.25), \
                abs(tpl[3]-0.25))
 
-def max_3_err(tpl):
+def get_max_3_err(tpl):
     return max(abs(tpl[0]-0.125), abs(tpl[1]-0.125), abs(tpl[2]-0.125), \
                abs(tpl[3]-0.125), abs(tpl[4]-0.125), abs(tpl[3]-0.125), \
                abs(tpl[6]-0.125), abs(tpl[7]-0.125))
@@ -84,21 +86,75 @@ err_1_list = (list(map(lambda x : (to_1_err(x[0]), x[1]), freq_1)))
 err_2_list = (list(map(lambda x : (to_2_err(x[0]), x[1]), freq_2)))
 err_3_list = (list(map(lambda x : (to_3_err(x[0]), x[1]), freq_3)))
 
+max_err_1 = np.array(list(map(lambda x : get_max_1_err(x[0]), freq_1))).reshape(-1,1)
+max_err_2 = np.array(list(map(lambda x : get_max_2_err(x[0]), freq_2))).reshape(-1,1)
+max_err_3 = np.array(list(map(lambda x : get_max_3_err(x[0]), freq_3))).reshape(-1,1)
+
 #Remove remove index from tuple, gen numpy array, reshape it so that it can be used for kmeans
 pure_err_array_1 = np.array(list(map(lambda x: x[0],err_1_list))).reshape(-1,1)
 pure_err_array_2 = np.array(list(map(lambda x: x[0],err_2_list))).reshape(-1,1)
 pure_err_array_3 = np.array(list(map(lambda x: x[0],err_3_list))).reshape(-1,1)
 
 km = KMeans(n_clusters=2, max_iter=3000)
-km_lab_1 = km.fit(pure_err_array_1).labels_
-km_lab_2 = km.fit(pure_err_array_2).labels_
-km_lab_3 = km.fit(pure_err_array_3).labels_
+km_lab_1 = km.fit(max_err_1).labels_
+km_lab_2 = km.fit(max_err_2).labels_
+km_lab_3 = km.fit(max_err_3).labels_
 
+print("SS-1 humans:")
+for i,v  in enumerate(km_lab_1):
+    if v == 1:
+        print(i)
+        
+print("SS-2 humans:")
+for i,v in enumerate(km_lab_2):
+    if v == 1:
+        print(i)
+
+print("SS-3 humans:")
+for i,v in enumerate(km_lab_3):
+    if v == 1:
+        print(i)
+        
 #Dummy output to check if the previous operations are correct
-print("Err_1:\n", err_1_list)
-print("P Err:\n", pure_err_array_1)
+#print("Err_1:\n", err_1_list)
+#print("P Err:\n", pure_err_array_1)
 #print("Err_2:\n", err_2_list)
 #print("Err_3:\n", err_3_list)
 print("\n\nKMeans results for 1-3 len subsequence freq. err.\n1:\n", km_lab_1)
 print("2:\n", km_lab_2)
 print("3:\n", km_lab_3)
+
+db = DBSCAN()
+err_1_lab = db.fit(pure_err_array_1).labels_
+err_2_lab = db.fit(pure_err_array_2).labels_
+err_3_lab = db.fit(pure_err_array_3).labels_
+
+print("1:\n", err_1_lab)
+print("2:\n", err_2_lab)
+print("3:\n", err_3_lab)
+
+labelList = list(range(1,61))
+
+plt.plot(labelList, max_err_1, 'bx')
+plt.axis([0,61,0,1])
+plt.show()
+
+plt.plot(labelList, max_err_2, 'bx')
+plt.axis([0,61,0,1])
+plt.show()
+
+plt.plot(labelList, max_err_3, 'bx')
+plt.axis([0,61,0,1])
+plt.show()
+
+plt.plot(labelList, pure_err_array_1, 'ro')
+plt.axis([0,61,0,1])
+plt.show()
+
+plt.plot(labelList, pure_err_array_2, 'go')
+plt.axis([0,61,0,1])
+plt.show()
+
+plt.plot(labelList, pure_err_array_3, 'bo')
+plt.axis([0,61,0,1])
+plt.show()
