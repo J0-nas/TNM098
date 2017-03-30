@@ -33,8 +33,9 @@ if __name__ == "__main__":
 		sequence = list(line)
 		ones = percentones(sequence)
 		runlist = runs(sequence)
-		curroutput = [str(i),str(ones),str(len(runlist)),str(max(runlist)),'\n']
+		curroutput = [str(i),str(ones),str(len(runlist)),str(max(runlist))]
 		output.write(",".join(curroutput))
+		output.write('\n')
 		if ones < 45 or ones > 55 or len(runlist) > 120 or len(runlist) < 80:
 			print "Suspicious values found!"
 			print "Ones:", percentones(sequence), "%, and runs total:", len(runlist)
