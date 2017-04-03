@@ -82,13 +82,23 @@ for i, line in enumerate(lines):
 #freq_2 = sorted(freq_2)
 #freq_3 = sorted(freq_3)
 
+print(sorted(freq_1))
 err_1_list = (list(map(lambda x : (to_1_err(x[0]), x[1]), freq_1)))
 err_2_list = (list(map(lambda x : (to_2_err(x[0]), x[1]), freq_2)))
 err_3_list = (list(map(lambda x : (to_3_err(x[0]), x[1]), freq_3)))
 
-max_err_1 = np.array(list(map(lambda x : get_max_1_err(x[0]), freq_1))).reshape(-1,1)
-max_err_2 = np.array(list(map(lambda x : get_max_2_err(x[0]), freq_2))).reshape(-1,1)
-max_err_3 = np.array(list(map(lambda x : get_max_3_err(x[0]), freq_3))).reshape(-1,1)
+max_err_1 = np.array(list(map(lambda x : get_max_1_err(x[0]), freq_1)))
+max_err_2 = np.array(list(map(lambda x : get_max_2_err(x[0]), freq_2)))
+max_err_3 = np.array(list(map(lambda x : get_max_3_err(x[0]), freq_3)))
+
+max_err_1_in = max_err_1.reshape(-1,1)
+max_err_2_in = max_err_2.reshape(-1,1)
+max_err_3_in = max_err_3.reshape(-1,1)
+
+max_1_2 = [ [x, y] for (x,y) in zip(max_err_1, max_err_2) ]
+max_1_3 = [ [x, y] for (x,y) in zip(max_err_1, max_err_3) ] 
+max_2_3 = [ [x, y] for (x,y) in zip(max_err_2, max_err_3) ]
+max_1_2_3 = [ [x, y, z] for (x, y, z) in zip(max_err_1, max_err_2, max_err_3) ]
 
 #Remove remove index from tuple, gen numpy array, reshape it so that it can be used for kmeans
 pure_err_array_1 = np.array(list(map(lambda x: x[0],err_1_list))).reshape(-1,1)
@@ -96,11 +106,36 @@ pure_err_array_2 = np.array(list(map(lambda x: x[0],err_2_list))).reshape(-1,1)
 pure_err_array_3 = np.array(list(map(lambda x: x[0],err_3_list))).reshape(-1,1)
 
 km = KMeans(n_clusters=2, max_iter=3000)
-km_lab_1 = km.fit(max_err_1).labels_
-km_lab_2 = km.fit(max_err_2).labels_
-km_lab_3 = km.fit(max_err_3).labels_
+#km_lab_1 = km.fit(max_err_1).labels_
+#km_lab_2 = km.fit(max_err_2).labels_
+#km_lab_3 = km.fit(max_err_3).labels_
+km_lab_1_2 = km.fit(max_1_2).labels_
+km_lab_1_3 = km.fit(max_1_3).labels_
+km_lab_2_3 = km.fit(max_2_3).labels_
 
-print("SS-1 humans:")
+km_lab_1_2_3 = km.fit(max_1_2_3).labels_
+
+print("SS-1_2 humans:")
+for i,v  in enumerate(km_lab_1_2):
+    if v == 1:
+        print(i)
+
+print("SS-1_3 humans:")
+for i,v  in enumerate(km_lab_1_3):
+    if v == 1:
+        print(i)
+
+print("SS-2_3 humans:")
+for i,v  in enumerate(km_lab_2_3):
+    if v == 1:
+        print(i)
+
+print("SS-1_2_3 humans:")
+for i,v  in enumerate(km_lab_1_2_3):
+    if v == 1:
+        print(i)
+        
+''''print("SS-1 humans:")
 for i,v  in enumerate(km_lab_1):
     if v == 1:
         print(i)
@@ -114,28 +149,30 @@ print("SS-3 humans:")
 for i,v in enumerate(km_lab_3):
     if v == 1:
         print(i)
-        
+'''        
 #Dummy output to check if the previous operations are correct
 #print("Err_1:\n", err_1_list)
 #print("P Err:\n", pure_err_array_1)
 #print("Err_2:\n", err_2_list)
 #print("Err_3:\n", err_3_list)
-print("\n\nKMeans results for 1-3 len subsequence freq. err.\n1:\n", km_lab_1)
-print("2:\n", km_lab_2)
-print("3:\n", km_lab_3)
+#print("\n\nKMeans results for 1-3 len subsequence freq. err.\n1:\n", km_lab_1)
+#print("2:\n", km_lab_2)
+#print("3:\n", km_lab_3)
 
 db = DBSCAN()
-err_1_lab = db.fit(pure_err_array_1).labels_
-err_2_lab = db.fit(pure_err_array_2).labels_
-err_3_lab = db.fit(pure_err_array_3).labels_
+#err_1_lab = db.fit(pure_err_array_1).labels_
+#err_2_lab = db.fit(pure_err_array_2).labels_
+#err_3_lab = db.fit(pure_err_array_3).labels_
 
-print("1:\n", err_1_lab)
-print("2:\n", err_2_lab)
-print("3:\n", err_3_lab)
+#print("1:\n", err_1_lab)
+#print("2:\n", err_2_lab)
+#print("3:\n", err_3_lab)
 
 labelList = list(range(1,61))
 
-plt.plot(labelList, max_err_1, 'bx')
+
+
+''''plt.plot(labelList, max_err_1, 'bx')
 plt.axis([0,61,0,1])
 plt.show()
 
@@ -146,8 +183,8 @@ plt.show()
 plt.plot(labelList, max_err_3, 'bx')
 plt.axis([0,61,0,1])
 plt.show()
-
-plt.plot(labelList, pure_err_array_1, 'ro')
+'''
+''''plt.plot(labelList, pure_err_array_1, 'ro')
 plt.axis([0,61,0,1])
 plt.show()
 
@@ -158,3 +195,4 @@ plt.show()
 plt.plot(labelList, pure_err_array_3, 'bo')
 plt.axis([0,61,0,1])
 plt.show()
+'''
