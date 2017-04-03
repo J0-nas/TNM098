@@ -1,0 +1,8 @@
+function parseInput()
+	 file = LineIterator(open("EyeTrack-raw.tsv"))
+	 res = []
+	 for line in file
+	     res += split(line, '\t')
+	 end
+	 return res
+end

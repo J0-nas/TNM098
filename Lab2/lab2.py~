@@ -1,0 +1,8 @@
+
+
+file = open("EyeTrack-raw.tsv", 'r')
+
+lines = []
+for line, i in enumerate(file):
+    if i != 0:
+        lines += line.split('\t')
