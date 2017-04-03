@@ -35,7 +35,7 @@ if __name__ == "__main__":
 		sequence = list(line)
 		ones = percentones(sequence)
 		runlist = runs(sequence)
-		curroutput = [str(i),str(ones),str(len(runlist)),str(max(runlist))]
+		curroutput = [str(i+1),str(ones),str(len(runlist)),str(max(runlist))]
 		output.write(",".join(curroutput))
 		output.write('\n')
 	output.flush()

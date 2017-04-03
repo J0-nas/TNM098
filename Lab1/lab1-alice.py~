@@ -1,5 +1,5 @@
 #from __future__ import division
-from pandas.tools.plotting import scatter_matrix
+#from pandas.tools.plotting import scatter_matrix
 
 # Percent of zeros is simply 100 - returned value
 # Should be 45-55% for a random sequence
@@ -30,7 +30,7 @@ if __name__ == "__main__":
 	file = open("CoinToss.txt", "r")
 	# Write a csv file with features
 	output = open("cointoss.csv", "w")
-	output.write("sequence,percentones,nruns,maxrunlenght\n")
+	output.write("obs,percentones,nruns,maxrunlength\n")
 	for i, line in enumerate(file):
 		sequence = list(line)
 		ones = percentones(sequence)
@@ -38,6 +38,4 @@ if __name__ == "__main__":
 		curroutput = [str(i),str(ones),str(len(runlist)),str(max(runlist))]
 		output.write(",".join(curroutput))
 		output.write('\n')
-		if ones < 45 or ones > 55 or len(runlist) > 120 or len(runlist) < 80:
-			print "Suspicious values found!"
-			print "Ones:", percentones(sequence), "%, and runs total:", len(runlist)
+	output.flush()
