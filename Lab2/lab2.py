@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from sklearn.cluster import AgglomerativeClustering
+from sklearn.cluster import AgglomerativeClustering, KMeans
 from mpl_toolkits.mplot3d import Axes3D
 
 
@@ -77,6 +77,7 @@ def expandedTime(lines):
     return res
 
 x_y_z = expandedTime(lines)
+#print(x_y_z)
 x = np.array( list ( map ( lambda x: x[0], x_y_z)))
 y = np.array( list ( map ( lambda x: x[1], x_y_z)))
 z = np.array( list ( map ( lambda x: x[2], x_y_z)))
@@ -88,14 +89,32 @@ ax = fig.gca(projection='3d')
 length = len(x)
 c = [cm(x/length) for x in range(length)]
 
-'''
-ax.plot(x, y, z, label='Eye movement')
-ax.legend()
-plt.show()
-'''
+
+#ax.plot(x, y, z, label='Eye movement')
+#ax.legend()
+#plt.show()
+
 
 ax = fig.add_subplot(111, projection='3d')
-ax.scatter(x, y, z, label='Eye movement', c=c)
+#ax.scatter(x, y, z, label='Eye movement', c=c)
+#ax.legend()
+#ax.set_xlabel('X')
+#ax.set_ylabel('Y')
+#ax.set_zlabel('Time')
+#ax.set_xlim3d(0, 1920)
+#ax.set_ylim3d(0,1080)
+#ax.set_zlim3d(0,300000)
+#plt.show()
+
+km = KMeans(n_clusters=8, max_iter=1000)
+zipped = [ [x_, y_, z_] for (x_, y_, z_) in zip(x, y, z)]
+lab = km.fit(zipped).labels_
+
+cm = plt.get_cmap('Vega10')
+colorList = [cm.colors[i] for i in lab]
+
+''''ax = fig.add_subplot(111, projection='3d')
+ax.scatter(x, y, z, label='Eye movement', c=colorList)
 ax.legend()
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
@@ -104,3 +123,8 @@ ax.set_xlim3d(0, 1920)
 ax.set_ylim3d(0,1080)
 ax.set_zlim3d(0,300000)
 plt.show()
+'''
+
+#ax.plot(x, y, z, label='Eye movement')
+#ax.legend()
+#plt.show()
