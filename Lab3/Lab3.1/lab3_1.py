@@ -15,15 +15,15 @@ x = [ x for x in range(256)]
 print("len x", len(x))
 print("lines", len(lines))
 plt.plot(x, lines[0])
-plt.axis([0,260,0,2000])
+plt.axis([0,260,0,100])
 plt.show()
 
 plt.plot(x, lines[1])
-plt.axis([0,260,0,2000])
+plt.axis([0,260,0,100])
 plt.show()
 
 plt.plot(x, lines[2])
-plt.axis([0,260,0,2000])
+plt.axis([0,260,0,100])
 plt.show()
 
 file = open("out2.txt", 'r')
@@ -41,13 +41,13 @@ x = [ x for x in range(256)]
 print("len x", len(x))
 print("lines", len(lines))
 plt.plot(x, lines[0])
-plt.axis([0,260,0,2000])
+plt.axis([0,260,0,100])
 plt.show()
 
 plt.plot(x, lines[1])
-plt.axis([0,260,0,2000])
+plt.axis([0,260,0,100])
 plt.show()
 
 plt.plot(x, lines[2])
-plt.axis([0,260,0,2000])
+plt.axis([0,260,0,100])
 plt.show()

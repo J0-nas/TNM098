@@ -46,15 +46,15 @@ public class Lab3_1 {
 				Color c = new Color(im.getRGB(x, y), true);
 				int red = c.getRed();
 				double oldRed = r.get(red);
-				r.put(red, oldRed + c.getAlpha()*red);
+				r.put(red, oldRed + c.getAlpha());
 				
 				int green = c.getGreen();
 				double oldGreen = g.get(green);
-				g.put(green, oldGreen + c.getAlpha()*green);
+				g.put(green, oldGreen + c.getAlpha());
 				
 				int blue = c.getBlue();
 				double oldBlue = b.get(blue);
-				b.put(blue, oldBlue + c.getAlpha()*blue);
+				b.put(blue, oldBlue + c.getAlpha());
 			}
 		}
 		ArrayList ret = new ArrayList<HashMap<Integer, Float>>();
@@ -68,16 +68,16 @@ public class Lab3_1 {
 		int size = im.getHeight()*im.getWidth();
 		
 		for(HashMap<Integer, Double> m : histograms) {
-			double max = 0;
-			for(double v : m.values()) {
-				if (v > max) {
-					max = v;
-				}
-			}
-			
+//			double max = 0;
+//			for(double v : m.values()) {
+//				if (v > max) {
+//					max = v;
+//				}
+//			}
+//			
 			for (int i : m.keySet()) {
 				double old = m.get(i);
-				m.put(i, (old/size));
+				m.put(i, (old/size)*10);
 			}
 		}
 		
@@ -109,19 +109,19 @@ public class Lab3_1 {
 		// TODO Auto-generated method stub
 		BufferedImage im;
 		try {
-			im = ImageIO.read(new File("02.jpg"));
+			im = ImageIO.read(new File("01.jpg"));
 			List<HashMap<Integer, Double>> histograms = getHistograms(im);
 			histograms = normalizeHistograms(histograms, im);
 			System.out.println(histograms.get(1));
 			
-			printHistogramsToFile(histograms, "out2.txt");
+			printHistogramsToFile(histograms, "out1.txt");
 			int x = im.getWidth()/2;
 			int y = im.getHeight()/2;
 			int x_offset = im.getWidth() / 20;
 			int y_offset = im.getHeight() / 20;
 			
 			histograms = getHistogramsOfSubImage(im, x, y, x_offset, y_offset);
-			printHistogramsToFile(histograms, "out2_center");
+			printHistogramsToFile(histograms, "out1_center");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
