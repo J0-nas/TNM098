@@ -1,7 +1,6 @@
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -11,24 +10,6 @@ import java.util.List;
 import javax.imageio.ImageIO;
 
 public class Lab3_1 {
-	public static List<HashMap <Integer, Double>> getHistogramsOfSubImage(BufferedImage im, int x_start, int y_start, int x_offset, int y_offset) {
-		if (((x_start - x_offset) > 0) &&
-			((x_start + x_offset -1) < im.getWidth()) &&
-			((y_start - y_offset) > 0) &&
-			((x_start + x_offset -1) < im.getWidth())) {
-			x_start = x_start - x_offset;
-			y_start = y_start - y_offset;
-			x_offset *= 2;
-			y_offset *= 2;
-			System.out.println("compute histograms of subimage starting at: " + x_start + " - " + y_start + ". x_off: " + x_offset + " y_off: " + y_offset);
-			
-			BufferedImage subImage = im.getSubimage(x_start, y_start, x_offset, y_offset);
-			return getHistograms(subImage);			
-		}
-		return null;
-	}
-	
-	
 	public static List<HashMap <Integer, Double>> getHistograms(BufferedImage im) {
 		int height = im.getHeight();
 		int width = im.getWidth();
@@ -43,6 +24,12 @@ public class Lab3_1 {
 		
 		for (int x = 0; x < width; x++) {
 			for (int y = 0; y < height; y++) {
+				/*int color = im.getRGB(x, y);
+				int alpha = color & 0x000F;
+				int red = color >> 24;
+				int green = (color >> 16) & 0x000F;
+				int blue = (color >> 8) & 0x000F;
+				*/
 				Color c = new Color(im.getRGB(x, y), true);
 				int red = c.getRed();
 				double oldRed = r.get(red);
@@ -74,6 +61,7 @@ public class Lab3_1 {
 					max = v;
 				}
 			}
+			System.out.println(max);
 			
 			for (int i : m.keySet()) {
 				double old = m.get(i);
@@ -82,27 +70,6 @@ public class Lab3_1 {
 		}
 		
 		return histograms;
-	}
-	
-	public static void printHistogramsToFile(List<HashMap<Integer, Double>> histograms, String filename) {
-		 PrintStream printStream;
-		try {
-			printStream = new PrintStream(new File(filename));
-			 for (HashMap<Integer, Double> m : histograms) {
-			    	for (int i : m.keySet()) {
-			    		//printStream.print(i + " " + m.get(i) + ";");
-			    		printStream.print(m.get(i));
-			    		//Dont print , before endl
-			    		if (i != 255) {
-			    			printStream.print(",");
-			    		}
-			    	}
-			    	printStream.print("\n");
-			    }
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 	public static void main(String[] args) {
@@ -114,14 +81,17 @@ public class Lab3_1 {
 			histograms = normalizeHistograms(histograms, im);
 			System.out.println(histograms.get(1));
 			
-			printHistogramsToFile(histograms, "out2.txt");
-			int x = im.getWidth()/2;
-			int y = im.getHeight()/2;
-			int x_offset = im.getWidth() / 20;
-			int y_offset = im.getHeight() / 20;
-			
-			histograms = getHistogramsOfSubImage(im, x, y, x_offset, y_offset);
-			printHistogramsToFile(histograms, "out2_center");
+		    PrintStream printStream = new PrintStream(new File("output.txt"));
+		    for (HashMap<Integer, Double> m : histograms) {
+		    	for (int i : m.keySet()) {
+		    		//printStream.print(i + " " + m.get(i) + ";");
+		    		printStream.print(m.get(i));
+		    		if (i != 255) {
+		    			printStream.print(",");
+		    		}
+		    	}
+		    	printStream.print("\n");
+		    }
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

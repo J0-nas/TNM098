@@ -18,10 +18,6 @@ public class Lab3_1 {
 			((x_start + x_offset -1) < im.getWidth())) {
 			x_start = x_start - x_offset;
 			y_start = y_start - y_offset;
-			x_offset *= 2;
-			y_offset *= 2;
-			System.out.println("compute histograms of subimage starting at: " + x_start + " - " + y_start + ". x_off: " + x_offset + " y_off: " + y_offset);
-			
 			BufferedImage subImage = im.getSubimage(x_start, y_start, x_offset, y_offset);
 			return getHistograms(subImage);			
 		}
@@ -109,19 +105,19 @@ public class Lab3_1 {
 		// TODO Auto-generated method stub
 		BufferedImage im;
 		try {
-			im = ImageIO.read(new File("02.jpg"));
+			im = ImageIO.read(new File("01.jpg"));
 			List<HashMap<Integer, Double>> histograms = getHistograms(im);
 			histograms = normalizeHistograms(histograms, im);
 			System.out.println(histograms.get(1));
 			
-			printHistogramsToFile(histograms, "out2.txt");
+			printHistogramsToFile(histograms, "out1.txt");
 			int x = im.getWidth()/2;
 			int y = im.getHeight()/2;
 			int x_offset = im.getWidth() / 20;
 			int y_offset = im.getHeight() / 20;
 			
 			histograms = getHistogramsOfSubImage(im, x, y, x_offset, y_offset);
-			printHistogramsToFile(histograms, "out2_center");
+			printHistogramsToFile(histograms, "out1_center");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
