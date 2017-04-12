@@ -1,0 +1,97 @@
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import javax.imageio.ImageIO;
+
+public class Lab3_1 {
+	public static List<HashMap <Integer, Double>> getHistograms(BufferedImage im) {
+		int height = im.getHeight();
+		int width = im.getWidth();
+		HashMap<Integer, Double> r = new HashMap<>();
+		HashMap<Integer, Double> g = new HashMap<>();
+		HashMap<Integer, Double> b = new HashMap<>();
+		for (int i = 0; i < 256; i++) {
+			r.put(i, 0.0);
+			g.put(i, 0.0);
+			b.put(i, 0.0);
+		}
+		
+		for (int x = 0; x < width; x++) {
+			for (int y = 0; y < height; y++) {
+				/*int color = im.getRGB(x, y);
+				int alpha = color & 0x000F;
+				int red = color >> 24;
+				int green = (color >> 16) & 0x000F;
+				int blue = (color >> 8) & 0x000F;
+				*/
+				Color c = new Color(im.getRGB(x, y), true);
+				int red = c.getRed();
+				double oldRed = r.get(red);
+				r.put(red, oldRed + c.getAlpha()/255);
+				
+				int green = c.getRed();
+				double oldGreen = r.get(green);
+				g.put(green, oldGreen + c.getAlpha()/255);
+				
+				int blue = c.getRed();
+				double oldBlue = r.get(blue);
+				b.put(blue, oldBlue + c.getAlpha()/255);
+			}
+		}
+		ArrayList ret = new ArrayList<HashMap<Integer, Float>>();
+		ret.add(r);
+		ret.add(g);
+		ret.add(b);
+		return ret;
+	}
+	
+	public static List<HashMap <Integer, Double>> normalizeHistograms(List<HashMap <Integer, Double>> histograms) {
+		for(HashMap<Integer, Double> m : histograms) {
+			double max = 0;
+			for(double v : m.values()) {
+				if (v > max) {
+					max = v;
+				}
+			}
+			for (int i : m.keySet()) {
+				double old = m.get(i);
+				m.put(i, (old/max)*100);
+			}
+		}
+		
+		return histograms;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BufferedImage im;
+		try {
+			im = ImageIO.read(new File("01.jpg"));
+			List<HashMap<Integer, Double>> histograms = getHistograms(im);
+			histograms = normalizeHistograms(histograms);
+			System.out.println(histograms.get(1));
+			
+		    PrintStream printStream = new PrintStream(new File("output.txt"));
+		    for (HashMap<Integer, Double> m : histograms) {
+		    	for (int i : m.keySet()) {
+		    		//printStream.print(i + " " + m.get(i) + ";");
+		    		printStream.print(m.get(i));
+		    		if (i != 255) {
+		    			printStream.print(",");
+		    		}
+		    	}
+		    	printStream.print("\n");
+		    }
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

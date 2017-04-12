@@ -1,0 +1,47 @@
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+
+import javax.imageio.ImageIO;
+
+public class Lab3_1 {
+	public static List<HashMap <Integer, Float>> getHistograms(BufferedImage im) {
+		int height = im.getHeight();
+		int width = im.getWidth();
+		HashMap<Integer, Float> r = new HashMap<>();
+		HashMap<Integer, Float> g = new HashMap<>();
+		HashMap<Integer, Float> b = new HashMap<>();
+		
+		for (int x = 0; x < width; x++) {
+			for (int y = 0; y < height; y++) {
+				/*int color = im.getRGB(x, y);
+				int alpha = color & 0x000F;
+				int red = color >> 24;
+				int green = (color >> 16) & 0x000F;
+				int blue = (color >> 8) & 0x000F;
+				*/
+				Color c = new Color(im.getRGB(x, y), true);
+				r.put(c.getRed(), r.get(c.getRed()) += c.getAlpha()/255);
+				
+				
+			}
+		}
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BufferedImage im;
+		try {
+			im = ImageIO.read(new File("01.jpg"));
+			getHistograms(im);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

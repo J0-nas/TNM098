@@ -1,0 +1,14 @@
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
+public class Lab3_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BufferedImage im = ImageIO.read(new File("../01.jpg"));
+		System.out.println(im.getHeight());
+	}
+
+}

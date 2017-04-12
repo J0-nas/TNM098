@@ -23,18 +23,18 @@ def subseq_1_freq(line):
 def subseq_2_freq(line):
     #total number or pairs
     total_2 = len(line) - 2 -1
-    
+
     _00 = len(re.findall(r'00', line, overlapped=True)) / total_2
     _01 = len(re.findall(r'01', line, overlapped=True)) / total_2
     _10 = len(re.findall(r'10', line, overlapped=True)) / total_2
     _11 = len(re.findall(r'11', line, overlapped=True)) / total_2
 
     return (_00, _01, _10, _11)
-    
+
 def subseq_3_freq(line):
     #because \n at the end
-    total_3 = len(line) - 3 -1 
-    
+    total_3 = len(line) - 3 -1
+
     _000 = len(re.findall(r'000', line, overlapped=True)) / total_3
     _001 = len(re.findall(r'001', line, overlapped=True)) / total_3
     _010 = len(re.findall(r'010', line, overlapped=True)) / total_3
@@ -46,17 +46,19 @@ def subseq_3_freq(line):
 
     return (_000, _001, _010, _011, _100, _101, _110, _111)
 
+#Sum of error for a subsequence
 def to_1_err(tpl):
     return abs(tpl[0]-0.5) + abs(tpl[1]-0.5)
 
 def to_2_err(tpl):
     return abs(tpl[0]-0.25) + abs(tpl[1]-0.25) + \
-        abs(tpl[2]-0.25) + abs(tpl[3]-0.25) 
+        abs(tpl[2]-0.25) + abs(tpl[3]-0.25)
 
 def to_3_err(tpl):
     return abs(tpl[0]-0.125) + abs(tpl[1]-0.125) + abs(tpl[2]-0.125) + \
         abs(tpl[3]-0.125) + abs(tpl[4]-0.125) + abs(tpl[5]-0.125) + \
         abs(tpl[6]-0.125) + abs(tpl[7]-0.125)
+
 
 def get_max_1_err(tpl):
     return abs(tpl[0])-0.5
@@ -91,12 +93,14 @@ max_err_1 = np.array(list(map(lambda x : get_max_1_err(x[0]), freq_1)))
 max_err_2 = np.array(list(map(lambda x : get_max_2_err(x[0]), freq_2)))
 max_err_3 = np.array(list(map(lambda x : get_max_3_err(x[0]), freq_3)))
 
+#Used for k-Means of max error for subsequences of length 1..3
 max_err_1_in = max_err_1.reshape(-1,1)
 max_err_2_in = max_err_2.reshape(-1,1)
 max_err_3_in = max_err_3.reshape(-1,1)
 
+#Used for k-Means of combined max errors of subsequences
 max_1_2 = [ [x, y] for (x,y) in zip(max_err_1, max_err_2) ]
-max_1_3 = [ [x, y] for (x,y) in zip(max_err_1, max_err_3) ] 
+max_1_3 = [ [x, y] for (x,y) in zip(max_err_1, max_err_3) ]
 max_2_3 = [ [x, y] for (x,y) in zip(max_err_2, max_err_3) ]
 max_1_2_3 = [ [x, y, z] for (x, y, z) in zip(max_err_1, max_err_2, max_err_3) ]
 
@@ -112,7 +116,6 @@ km = KMeans(n_clusters=2, max_iter=3000)
 km_lab_1_2 = km.fit(max_1_2).labels_
 km_lab_1_3 = km.fit(max_1_3).labels_
 km_lab_2_3 = km.fit(max_2_3).labels_
-
 km_lab_1_2_3 = km.fit(max_1_2_3).labels_
 
 print("SS-1_2 humans:")
@@ -134,12 +137,12 @@ print("SS-1_2_3 humans:")
 for i,v  in enumerate(km_lab_1_2_3):
     if v == 1:
         print(i)
-        
+
 ''''print("SS-1 humans:")
 for i,v  in enumerate(km_lab_1):
     if v == 1:
         print(i)
-        
+
 print("SS-2 humans:")
 for i,v in enumerate(km_lab_2):
     if v == 1:
@@ -149,7 +152,7 @@ print("SS-3 humans:")
 for i,v in enumerate(km_lab_3):
     if v == 1:
         print(i)
-'''        
+'''
 #Dummy output to check if the previous operations are correct
 #print("Err_1:\n", err_1_list)
 #print("P Err:\n", pure_err_array_1)

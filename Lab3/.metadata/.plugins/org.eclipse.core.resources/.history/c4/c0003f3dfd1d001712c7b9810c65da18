@@ -1,0 +1,74 @@
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import javax.imageio.ImageIO;
+
+public class Lab3_1 {
+	public static List<HashMap <Integer, Float>> getHistograms(BufferedImage im) {
+		int height = im.getHeight();
+		int width = im.getWidth();
+		HashMap<Integer, Float> r = new HashMap<>();
+		HashMap<Integer, Float> g = new HashMap<>();
+		HashMap<Integer, Float> b = new HashMap<>();
+		
+		for (int x = 0; x < width; x++) {
+			for (int y = 0; y < height; y++) {
+				/*int color = im.getRGB(x, y);
+				int alpha = color & 0x000F;
+				int red = color >> 24;
+				int green = (color >> 16) & 0x000F;
+				int blue = (color >> 8) & 0x000F;
+				*/
+				Color c = new Color(im.getRGB(x, y), true);
+				int red = c.getRed();
+				float oldRed = r.get(red);
+				r.put(red, oldRed + c.getAlpha()/255);
+				
+				int green = c.getRed();
+				float oldGreen = r.get(green);
+				r.put(green, oldGreen + c.getAlpha()/255);
+				
+				int blue = c.getRed();
+				float oldBlue = r.get(blue);
+				r.put(blue, oldBlue + c.getAlpha()/255);
+			}
+		}
+		ArrayList ret = new ArrayList<HashMap<Integer, Float>>();
+		ret.add(r);
+		ret.add(g);
+		ret.add(b);
+		return ret;
+	}
+	
+	public static List<HashMap <Integer, Float>> normalizeHistograms(List<HashMap <Integer, Float>> histograms) {
+		for(HashMap<Integer, Float> m : histograms) {
+			float max = 0;
+			for(float v : m.values()) {
+				if (v > max) {
+					max = v;
+				}
+			}
+		}
+		
+		return histograms;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BufferedImage im;
+		try {
+			im = ImageIO.read(new File("01.jpg"));
+			List<HashMap<Integer, Float>> histograms = getHistograms(im);
+			histograms = normalizeHistograms(histograms);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
