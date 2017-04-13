@@ -108,20 +108,22 @@ public class Lab3_1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BufferedImage im;
+		String id = "01";
 		try {
-			im = ImageIO.read(new File("01.jpg"));
+			
+			im = ImageIO.read(new File(id + "jpg"));
 			List<HashMap<Integer, Double>> histograms = getHistograms(im);
 			histograms = normalizeHistograms(histograms, im);
 			System.out.println(histograms.get(1));
 			
-			printHistogramsToFile(histograms, "out1.txt");
+			printHistogramsToFile(histograms, "out_" + id);
 			int x = im.getWidth()/2;
 			int y = im.getHeight()/2;
 			int x_offset = im.getWidth() / 20;
 			int y_offset = im.getHeight() / 20;
 			
 			histograms = getHistogramsOfSubImage(im, x, y, x_offset, y_offset);
-			printHistogramsToFile(histograms, "out1_center");
+			printHistogramsToFile(histograms, "out_center_" + id);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
