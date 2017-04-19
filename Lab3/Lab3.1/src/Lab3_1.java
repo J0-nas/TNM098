@@ -11,6 +11,7 @@ import java.util.List;
 import javax.imageio.ImageIO;
 
 public class Lab3_1 {
+	
 	public static List<HashMap <Integer, Double>> getHistogramsOfSubImage(BufferedImage im, int x_start, int y_start, int x_offset, int y_offset) {
 		if (((x_start - x_offset) > 0) &&
 			((x_start + x_offset -1) < im.getWidth()) &&
@@ -106,28 +107,50 @@ public class Lab3_1 {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		BufferedImage im;
-		String id = "01";
-		try {
-			
-			im = ImageIO.read(new File(id + "jpg"));
-			List<HashMap<Integer, Double>> histograms = getHistograms(im);
-			histograms = normalizeHistograms(histograms, im);
-			System.out.println(histograms.get(1));
-			
-			printHistogramsToFile(histograms, "out_" + id);
-			int x = im.getWidth()/2;
-			int y = im.getHeight()/2;
-			int x_offset = im.getWidth() / 20;
-			int y_offset = im.getHeight() / 20;
-			
-			histograms = getHistogramsOfSubImage(im, x, y, x_offset, y_offset);
-			printHistogramsToFile(histograms, "out_center_" + id);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (args.length == 0) {
+			System.out.println("No filenames provided...");
+			return;
+		}
+		for (int i = 0; i<args.length; i++) {
+			// TODO Auto-generated method stub
+			BufferedImage im;
+			//String id = "01";
+			String id = args[i];
+			try {
+				
+				im = ImageIO.read(new File(id + ".jpg"));
+				List<HashMap<Integer, Double>> histograms = getHistograms(im);
+				histograms = normalizeHistograms(histograms, im);
+				System.out.println(histograms.get(1));
+				printHistogramsToFile(histograms, "out_" + id);
+				
+				// take w/10 and h/10 pixels left, right, above, below the x-y point
+				int frame_width = 10;
+				int frame_height = 10;
+				int x = im.getWidth()/2;
+				int y = im.getHeight()/2;
+				int x_offset = im.getWidth() / frame_width;
+				int y_offset = im.getHeight() / frame_height;
+				histograms = getHistogramsOfSubImage(im, x, y, x_offset, y_offset);
+				printHistogramsToFile(histograms, "out_center_" + frame_width + "-" + frame_height + "_" + id);
+				
+				int x_0 = im.getWidth()/4;
+				int x_1 = (im.getWidth()/4) * 3;
+				int y_0 = im.getHeight()/4;
+				int y_1 = (im.getHeight()/4) * 3;
+				histograms = getHistogramsOfSubImage(im, x_0, y_0, x_offset, y_offset);
+				printHistogramsToFile(histograms, "out_0-0_" + id);
+				histograms = getHistogramsOfSubImage(im, x_0, y_1, x_offset, y_offset);
+				printHistogramsToFile(histograms, "out_0-1_" + id);
+				histograms = getHistogramsOfSubImage(im, x_1, y_0, x_offset, y_offset);
+				printHistogramsToFile(histograms, "out_1-0_" + id);
+				histograms = getHistogramsOfSubImage(im, x_1, y_1, x_offset, y_offset);
+				printHistogramsToFile(histograms, "out_1-1_" + id);
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
-
 }

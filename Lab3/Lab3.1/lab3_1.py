@@ -23,7 +23,7 @@ plt.axis([0,260,0,100])
 plt.show()
 
 plt.plot(x, lines[2])
-plt.axis([0,260,0,100])
+plt.axis([0,260,0,1‚100])
 plt.show()
 
 file = open("out2.txt", 'r')
