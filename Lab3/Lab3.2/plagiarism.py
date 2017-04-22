@@ -11,13 +11,17 @@ for i in range(1,11):
 		filename = str(i)
 
 	file = open(filename + ".txt", "r")
-	#parsed = open(filename, "w+")
+	parsed = open(filename, "w+")
 	for line in file:
 		#print(line)
 		# Delete all non-letter 
-		res = line.translate(None, string.punctuation).lower()
+		res = line.replace("\n", " ")
+		res = res.replace("-", " ")
+		res = res.translate(None, "\"\',;:!?^*_-()\t\n\r").lower()
+		res = re.sub(r"(\s)+", "&", res)
+
 		# TODO: convert single newlines into space
-		#parsed.write(res)
+		parsed.write(res)
 
 		numeric_line = ""
 
