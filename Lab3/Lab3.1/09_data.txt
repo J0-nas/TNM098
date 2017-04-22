@@ -1,0 +1,4 @@
+# RGB (average, whole image)
+R:45 G:34 B:33
+# Luminance (average, whole image)
+36.2664
