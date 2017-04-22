@@ -131,6 +131,7 @@ public class Lab3_1 {
 				int y_offset = im.getHeight() / frame_height;
 				int frame_size = 2*x_offset * 2*y_offset;
 				histograms = getHistogramsOfSubImage(im, x, y, x_offset, y_offset);
+				histograms = normalizeHistograms(histograms, frame_size);
 				printHistogramsToFile(histograms, "out_center_" + frame_width + "-" + frame_height + "_" + id);
 				
 				int x_0 = im.getWidth()/4;
