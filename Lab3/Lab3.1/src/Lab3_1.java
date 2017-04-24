@@ -47,15 +47,15 @@ public class Lab3_1 {
 				Color c = new Color(im.getRGB(x, y), true);
 				int red = c.getRed();
 				double oldRed = r.get(red);
-				r.put(red, oldRed + c.getAlpha());
+				r.put(red, oldRed + red);
 				
 				int green = c.getGreen();
 				double oldGreen = g.get(green);
-				g.put(green, oldGreen + c.getAlpha());
+				g.put(green, oldGreen + green);
 				
 				int blue = c.getBlue();
 				double oldBlue = b.get(blue);
-				b.put(blue, oldBlue + c.getAlpha());
+				b.put(blue, oldBlue + blue);
 			}
 		}
 		ArrayList ret = new ArrayList<HashMap<Integer, Float>>();

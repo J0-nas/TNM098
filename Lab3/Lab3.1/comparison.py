@@ -30,6 +30,7 @@ ids = ["0" + str(x) if x < 10 else str(x) for x in range(1,13)]
 print(ids)
 start = 1
 
+#Load base image metrics 
 histo = loadHisto('out_'+ids[start-1])
 histo_c = loadHisto('out_center_10-10_'+ ids[start-1])
 histo_corner_00 = loadHisto('out_0-0_' + ids[start-1])
@@ -50,6 +51,7 @@ all_err_sum = []
 all_err_avg = []
 all_err_lumi = []
 
+#For each image besides the base image, read the metrics and print the error into an output file
 otherIds = [ids[i-1] for i in range(1,13) if (i!=start) ]
 for id in otherIds:
     o_histo = loadHisto('out_'+id)
@@ -69,16 +71,16 @@ for id in otherIds:
     err_avg = compareAvgColor(avg_color, o_avg)
     err_lumi = abs(lumi - o_lumi)
 
-    f.write("Error with " + id + "\n")
-    f.write("histo " + str(err) + "\n")
-    f.write("histo Center " + str(err_c) + "\n")
-    f.write("\thisto_c_00 " + str(err_c_00) + "\n")
-    f.write("\thisto_c_01 " + str(err_c_01) + "\n")
-    f.write("\thisto_c_10 " + str(err_c_10) + "\n")
-    f.write("\thisto_c_11 " + str(err_c_11) + "\n")
-    f.write("Corner Sum " + str(err_c_sum) + "\n")
-    f.write("Avg error " + str(err_avg) + "\n")
-    f.write("Lumi error " + str(err_lumi) + "\n")
+    f.write("Error with image: " + id + "\n")
+    f.write("histo \t\t\t" + str(err) + "\n")
+    f.write("histo Center \t\t" + str(err_c) + "\n")
+    #f.write("\thisto_c_00 " + str(err_c_00) + "\n")
+    #f.write("\thisto_c_01 " + str(err_c_01) + "\n")
+    #f.write("\thisto_c_10 " + str(err_c_10) + "\n")
+    #f.write("\thisto_c_11 " + str(err_c_11) + "\n")
+    f.write("Corner Sum \t\t" + str(err_c_sum) + "\n")
+    f.write("Avg color error \t" + str(err_avg) + "\n")
+    f.write("Lumi error \t\t" + str(err_lumi) + "\n")
     f.write("\n")
 
     all_err += [(err, id)]
@@ -87,27 +89,36 @@ for id in otherIds:
     all_err_avg += [(err_avg, id)]
     all_err_lumi += [(err_lumi, id)]
 
+#Compute the max error for each metric
 max_err = max(all_err)[0]
 max_err_c = max(all_err_c)[0]
 max_err_sum = max(all_err_sum)[0]
 max_err_avg = max(all_err_avg)[0]
 max_err_lumi = max(all_err_lumi)[0]
+
+#Normalize the errors using the max error
 n_all_err = [(x[0]/max_err, x[1]) for x in all_err]
 n_all_err_c = [(x[0]/max_err_c, x[1]) for x in all_err_c]
 n_all_err_sum = [(x[0]/max_err_sum, x[1]) for x in all_err_sum]
 n_all_err_avg = [(x[0]/max_err_avg, x[1]) for x in all_err_avg]
 n_all_err_lumi = [(x[0]/max_err_lumi, x[1]) for x in all_err_lumi]
 
+print(sorted(n_all_err))
+print(sorted(n_all_err_avg))
+
 #print(n_all_err_sum, n_all_err_lumi)
-#Remove
+#Zip the lists to a tuple
 n_err_list = [(x[0][0], x[1][0], x[2][0], x[3][0], x[4][0], x[0][1]) for x in zip(n_all_err,n_all_err_c, n_all_err_sum, n_all_err_avg, n_all_err_lumi)]
 #print(n_err_list)
 
+#Define weights used to compute the total error of an image to the base
 w1 = 0.2
 w2 = 0.3
 w3 = 0.2
 w4 = 0.15
 w5 = 0.15
 summed = [ (w1*x[0]+w2*x[1]+w3*x[2]+w4*x[3]+w5*x[4], x[5])for x in n_err_list]
+
+#Rank the images according to the total error
 res = sorted(summed)
 print(res)

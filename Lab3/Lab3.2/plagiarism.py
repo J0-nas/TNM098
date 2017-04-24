@@ -17,8 +17,8 @@ for i in range(1,11):
 		# Delete all non-letter 
 		res = line.replace("\n", " ")
 		res = res.replace("-", " ")
-		res = res.translate(None, "\"\',;:!?^*_-()\t\n\r").lower()
-		res = re.sub(r"(\s)+", "&", res)
+		res = res.replace("[^A-Za-z0-9]", "").lower()
+		res = re.sub(r"[ ]+", " ", res)
 
 		# TODO: convert single newlines into space
 		parsed.write(res)

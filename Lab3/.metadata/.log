@@ -93,3 +93,8 @@ org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
 	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 2 0 2017-04-24 12:01:22.325
+!MESSAGE Error parsing metadata repository
+!SUBENTRY 1 org.eclipse.equinox.p2.core 2 0 2017-04-24 12:01:22.326
+!MESSAGE Error in file:/Applications/Eclipse.app/Contents/Eclipse/p2/org.eclipse.equinox.p2.repository/cache/content-1034870324.jar at line 58743, column 62: Missing required attribute in "property": value
