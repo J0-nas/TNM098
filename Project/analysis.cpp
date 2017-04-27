@@ -4,6 +4,9 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <iomanip>
+#include <ctime>
+
 
 using namespace std;
 
@@ -24,26 +27,34 @@ public:
     int c_t = stoi(words[2]);
     //copy(words.begin(), words.end(), ostream_iterator<string>{cout, ", "});
     //cout << endl;
+
+    istringstream time_reader {words[0]};
+    tm t{0};
+    time_reader >> get_time(&t, "%Y-%m-%d %H:%M:%S");
+    //strptime(words[0], "%Y-%m-%d %H:%M-%S", &t);
+
+    //istringstream ss("2014 11 05 T 12 34 56");
+    //ss >> get_time(&t, "%Y %m %d T %H %M %S");
     
-    time_stamp = words[0];
+    time_stamp = mktime(&t);
+    
     car_id = words[1];
     car_type = c_t;
     checkpoint_id = words[3];
-      //DataPoint(move(words[0]), words[1], c_t, words[3]);
   }
 
-  DataPoint(string t_s, string c_i, int c_t, string check_i):
-    time_stamp {move(t_s)}, car_id{c_i}, car_type {c_t}, checkpoint_id {check_i}
+  DataPoint(int t_s, string c_i, int c_t, string check_i):
+    time_stamp {t_s}, car_id{c_i}, car_type {c_t}, checkpoint_id {check_i}
   {
     cout << time_stamp << endl;
   }
 
   string getSummary() {
-    return "t_s: " + time_stamp + " c_i: " + car_id + " c_t: " + to_string(car_type) + " c_i: " + checkpoint_id;
+    return "t_s: " + to_string(time_stamp) + " c_i: " + car_id + " c_t: " + to_string(car_type) + " c_i: " + checkpoint_id;
   }
   
 private:
-  string time_stamp{};
+  int time_stamp{};
   string car_id{};
   int car_type{};
   string checkpoint_id{};
@@ -56,12 +67,11 @@ int main(int argc, char** argv) {
   cout << line << endl;
   vector<DataPoint> points {};
   while(getline(ifs, line)) {
-    //cout << line << endl;
-    
-    //points.push_back(DataPoint{line});
     DataPoint tmp {line};
     points.push_back(DataPoint{line});
   }
+
+  
   cout << points.at(0).getSummary() << endl;
   cout << points.back().getSummary() << endl;
 }
