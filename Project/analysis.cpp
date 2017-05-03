@@ -80,7 +80,15 @@ public:
   string getIdentifier() {
     return string{car_id};
   }
-  
+
+  int getTime() {
+    return time_stamp;
+  }
+
+  string getLocation() {
+    return checkpoint_id;
+  }
+    
 private:
   int time_stamp{};
   string car_id{};
@@ -97,7 +105,7 @@ int main(int argc, char** argv) {
   int i = 0;
   while(getline(ifs, line) && i < 30) {
     points.push_back(move(DataPoint{line}));
-    i ++;
+    i --;
   }
   cout << "\tvector built" << endl;
   
@@ -131,14 +139,24 @@ int main(int argc, char** argv) {
   cout << "\tmap built" << endl;
 
   for (auto & n: m) {
-    for (auto & i: n.second) {
+    //for (auto & i: n.second) {
       //cout << i.getSummary() << endl;
+    //}
+    int start{n.second.front().getTime()};
+    int end{n.second.back().getTime()};
+    int diff = end-start;
+    if (diff > 60*60*24) {
+      cout << n.first << endl;
+      cout << "\t\tMore than 24h: " << (diff/60) << " min." << endl;
+      for (auto & i: n.second) {
+	cout << i.getLocation() << endl;
+      }
     }
   }
 
   cout << "points" << endl;
-  for (auto & d: points) {
-    cout << d.getSummary() << endl;
-  }
+  //for (auto & d: points) {
+  //  cout << d.getLocation() << endl;
+  //}
   //copy(m.begin(), m.end(), ostream_iterator<vector<DataPoint>>{cout});
 }
