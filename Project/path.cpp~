@@ -1,0 +1,13 @@
+#include <vector>
+#include <string>
+#include <iostream>
+
+
+class Path {
+public:
+private:
+  int duration{};
+  string car_id{};
+  int car_type{};
+  vector<string> locations{};
+};
