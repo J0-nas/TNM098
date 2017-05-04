@@ -1,3 +1,4 @@
+
 #pragma once
 
 #include <vector>
@@ -20,9 +21,27 @@ public:
     {}
 
   //Assumes the new location to be visited after the last one...
-  void addLocation(string loc) {
-    locations.push_back(loc);
+  void addLocation(tuple<int, string> loc_pair) {
+    locations.push_back(loc_pair);
     duration  = get<0>(locations.back()) - get<0>(locations.front());
+  }
+
+  void initCarInfo(string id, int type) {
+    car_id = id;
+    car_type = type;
+  }
+
+  string getPathLocString() {
+    string res{""};
+    for (auto & loc: locations) {
+      res.append(get<1>(loc));
+      res.append(" ");
+    }
+    return res;
+  }
+
+  int getPathDescription() {
+    return 0;
   }
 
 private:

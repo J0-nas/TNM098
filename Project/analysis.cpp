@@ -9,6 +9,8 @@
 #include <ctime>
 #include <utility>
 
+#include <typeinfo>
+
 #include "datapoint.cpp"
 #include "path.cpp"
 
@@ -57,24 +59,47 @@ int main(int argc, char** argv) {
   cout << "\tmap built" << endl;
 
   string car_id{};
+  vector<Path> paths{};
   for (auto & n: m) {
     //for (auto & i: n.second) {
       //cout << i.getSummary() << endl;
     //}
-    car_id{n};
+    car_id = string{n.first};
     int start{n.second.front().getTime()};
     int end{n.second.back().getTime()};
     int diff = end-start;
+    //add >1 day paths
     if (diff > 60*60*24) {
       cout << n.first << endl;
-      cout << "\t\tMore than 24h: " << (diff/60) << " min." << endl;
+      cout << "\t\tMore than 24h: " << (diff/(60*60)) << " hrs." << endl;
       for (auto & i: n.second) {
 	cout << i.getLocation() << endl;
+      }
+      // Add <1 day path
+    } else {
+      paths.push_back(Path{});
+      paths.back().initCarInfo(n.second.front().getIdentifier(), n.second.front().getCarType());
+      for (auto & p: n.second) {
+	paths.back().addLocation(make_tuple(p.getTime(), p.getLocation()));
       }
     }
   }
   cout << car_id << endl;
-  Path p{m[car_id]};
+  //cout << typeid(m[car_id]).name() << endl;
+  //Path p{m[car_id].front()};
+
+  map<string, int> pathCount{};
+  for (auto& p : paths) {
+    if (pathCount.find(p.getPathLocString()) == pathCount.end()) {
+      pathCount[p.getPathLocString()] = 1;
+    } else {
+      pathCount[p.getPathLocString()] = pathCount[p.getPathLocString()] + 1;
+    }
+  }
+
+  for (auto& c: pathCount) {
+    cout << "\t" << c.second << endl;
+  }
   
   //cout << "points" << endl;
   //for (auto & d: points) {

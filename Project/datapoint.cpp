@@ -82,6 +82,10 @@ public:
     return string{car_id};
   }
 
+  int getCarType() {
+    return car_type;
+  }
+
   int getTime() {
     return time_stamp;
   }
