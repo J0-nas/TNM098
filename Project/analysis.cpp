@@ -60,6 +60,7 @@ int main(int argc, char** argv) {
 
   string car_id{};
   vector<Path> paths{};
+  vector<Path> multi_day_paths{};
   for (auto & n: m) {
     //for (auto & i: n.second) {
       //cout << i.getSummary() << endl;
@@ -70,10 +71,10 @@ int main(int argc, char** argv) {
     int diff = end-start;
     //add >1 day paths
     if (diff > 60*60*24) {
-      cout << n.first << endl;
-      cout << "\t\tMore than 24h: " << (diff/(60*60)) << " hrs." << endl;
-      for (auto & i: n.second) {
-	cout << i.getLocation() << endl;
+      multi_day_paths.push_back(Path{});
+      multi_day_paths.back().initCarInfo(n.second.front().getIdentifier(), n.second.front().getCarType());
+      for (auto & p: n.second) {
+	multi_day_paths.back().addLocation(make_tuple(p.getTime(), p.getLocation()));
       }
       // Add <1 day path
     } else {
@@ -98,7 +99,22 @@ int main(int argc, char** argv) {
   }
 
   for (auto& c: pathCount) {
-    cout << "\t" << c.second << endl;
+    //cout << "\t" << c.second << endl;
+  }
+  cout << paths.size() << endl;
+  cout << multi_day_paths.size() << endl;
+
+  ofstream s1{};
+  s1.open("single_day_paths.csv");
+  for (auto& p: paths) {
+    s1 << p.buildCSVString() << endl;
+  }
+  s1.close();
+
+  ofstream s2{};
+  s2.open("multi_day_paths.csv");
+  for (auto& p: multi_day_paths) {
+    s2 << p.buildCSVString() << endl;
   }
   
   //cout << "points" << endl;

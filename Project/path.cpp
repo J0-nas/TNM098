@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <sstream>
 #include <iostream>
 #include <tuple>
 
@@ -42,6 +43,20 @@ public:
 
   int getPathDescription() {
     return 0;
+  }
+
+  int getPathLength() {
+    return locations.size();
+  }
+
+  string buildCSVString() {
+    stringstream ss{};
+    ss << car_id << "," << to_string(car_type) << "," << to_string(duration);
+    for (auto& l : locations) {
+      ss << "," << to_string(get<0>(l)) << " " << get<1>(l);
+    }
+    //ss << endl;
+    return ss.str();
   }
 
 private:
