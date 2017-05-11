@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3/d3.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+	var w = 982;
+	var h = 982;
+	var div = d3.select("body").append("div");
+	//div.attr("src", "Lekagul Roadways labeled v2.jpg").style({zIndex: -2});
+	div.style({width: w+"px", height: h+"px", backgroundImage: "url(Lekagul Roadways labeled v2.jpg)"})
+	
+	var svg = div.append("svg").attr("width", w).attr("height",h);
+
+	var dataset = [ 5, 10, 15, 20, 25 ];
+	svg.append("circle").attr("cx", 100).attr("cy", 200).attr("r", 200).style({fill: "yellow"});
+	
+      </script>
+    </body>
+</html>
