@@ -4,10 +4,11 @@ def seq_matches_path(path, seq):
     path_i = 0
     found = False
     for i in seq:
+        #print(path_i)
         for j in range(path_i, len(path)):
             if i == path[j]:
                 #print(i, " found in ", path)
-                path_i += 1
+                path_i = j+1
                 found = True
                 break
         if not found:
@@ -68,13 +69,12 @@ def apriori(db, minSupport):
                 seq_list.append(i)
 
     seq_list = [ [i] for i in seq_list ]
-    #print(seq_list[:20], len(seq_list))
     freq_list = [freq(s, db) for s in seq_list]
-    #print(freq_list[:20])
     min_length = 2
     while len(seq_list) > 1:
         n_seq = []
-        for s, s_ in [ (s, s2) for s in seq_list for s2 in seq_list if s != s2]:
+        #Regular apriori
+        ''''for s, s_ in [ (s, s2) for s in seq_list for s2 in seq_list if s != s2]:
             #print(s, s_)
             for i in s_:
                 candidate = s + [i]
@@ -82,7 +82,16 @@ def apriori(db, minSupport):
                 if i not in s and not candidate in n_seq:
                     n_seq += [candidate]
                     break;
-
+        '''
+        candidates = []
+        for s in seq_list:
+            for i in s:
+                if not i in candidates:
+                    candidates += [i]
+        for s in seq_list:
+            for c in candidates:
+                n_seq += [s + [c]]
+            
         freq_list = [freq(s, db) for s in n_seq]
         del_list = [ j for j, i in enumerate(freq_list) if i < minSupport ]
         seq_list = [ i for j, i in enumerate(n_seq) if j not in del_list ]
@@ -101,8 +110,8 @@ def apriori(db, minSupport):
 results = []
 
 #f_name = sys.argv[1]
-#f_name = "multi_day_paths.csv"
-f_name = "single_day_paths.csv"
+f_name = "multi_day_paths.csv"
+#f_name = "single_day_paths.csv"
 
 paths = []
 transactions = []
@@ -147,7 +156,7 @@ for key, value in transitions.items():
         print("From: ", key, " to: ", k, " - ", v)
 
 
-minsupp = 0.35
+minsupp = 0.2
 #res = find_common_paths(transactions, minsupp)
 res = apriori(transactions, minsupp)
 
