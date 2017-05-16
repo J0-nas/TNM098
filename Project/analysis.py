@@ -62,13 +62,13 @@ def find_common_paths(db, minSupport):
 def apriori(db, minSupport):
     res = []
     
-    seq_list = []
+    candidates = []
     for t in db:
         for i in t:
-            if not i in seq_list:
-                seq_list.append(i)
+            if not i in candidates:
+                candidates.append(i)
 
-    seq_list = [ [i] for i in seq_list ]
+    seq_list = [ [i] for i in candidates ]
     freq_list = [freq(s, db) for s in seq_list]
     min_length = 2
     while len(seq_list) > 1:
@@ -83,11 +83,7 @@ def apriori(db, minSupport):
                     n_seq += [candidate]
                     break;
         '''
-        candidates = []
-        for s in seq_list:
-            for i in s:
-                if not i in candidates:
-                    candidates += [i]
+        #optimization: only add allowed transitions
         for s in seq_list:
             for c in candidates:
                 n_seq += [s + [c]]
@@ -156,12 +152,13 @@ for key, value in transitions.items():
         print("From: ", key, " to: ", k, " - ", v)
 
 
-minsupp = 0.2
+minsupp = 0.30
 #res = find_common_paths(transactions, minsupp)
 res = apriori(transactions, minsupp)
 
 #s = ['general-gate3', 'camping1']
 #s = ['general-gate1', 'ranger-stop0', 'general-gate7', 'ranger-stop2', 'general-gate4']
+#s = ['general-gate7', 'general-gate7', 'general-gate4', 'general-gate1', 'ranger-stop2', 'ranger-stop0', 'general-gate2']
 #print(freq(s, transactions))
 
 print(res)
