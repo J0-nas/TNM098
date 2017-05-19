@@ -40,14 +40,15 @@ public:
     //cout << "in move constructor" << endl;
     other.time_stamp = -1;
     other.car_id = "";
-    other.car_type = -1;
+    other.car_type = "";
     other.checkpoint_id = "";
   }
   
   DataPoint(string csv_line) {
     istringstream iss(csv_line);
     vector<string> words {istream_iterator<WordDelimitedByComma>{iss}, istream_iterator<WordDelimitedByComma>{}};
-    int c_t = stoi(words[2]);
+    //int c_t = stoi(words[2]);
+    string c_t = words[2];
     //copy(words.begin(), words.end(), ostream_iterator<string>{cout, ", "});
     //cout << endl;
 
@@ -67,7 +68,7 @@ public:
     //cout << "string constructor" << endl;
   }
 
-  DataPoint(int t_s, string c_i, int c_t, string check_i):
+  DataPoint(int t_s, string c_i, string c_t, string check_i):
     time_stamp {t_s}, car_id{c_i}, car_type {c_t}, checkpoint_id {check_i}
   {
     //cout << time_stamp << endl;
@@ -75,14 +76,14 @@ public:
   }
 
   string getSummary() {
-    return "t_s: " + to_string(time_stamp) + " c_i: " + car_id + " c_t: " + to_string(car_type) + " c_i: " + checkpoint_id;
+    return "t_s: " + to_string(time_stamp) + " c_i: " + car_id + " c_t: " + car_type + " c_i: " + checkpoint_id;
   }
 
   string getIdentifier() {
     return string{car_id};
   }
 
-  int getCarType() {
+  string getCarType() {
     return car_type;
   }
 
@@ -97,7 +98,7 @@ public:
 private:
   int time_stamp{};
   string car_id{};
-  int car_type{};
+  string car_type{};
   string checkpoint_id{};
 
   friend class Path;

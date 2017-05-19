@@ -1,0 +1,16 @@
+0.13906752411575563, entrance4 general-gate5 general-gate2 ranger-stop0
+0.13906752411575563, general-gate5 general-gate2 ranger-stop0 ranger-stop2
+0.27813504823151125, general-gate2 ranger-stop0 ranger-stop2 general-gate1
+0.1422829581993569, ranger-stop0 general-gate2 general-gate5 entrance4
+0.1422829581993569, ranger-stop2 ranger-stop0 general-gate2 general-gate5
+0.16720257234726688, ranger-stop2 ranger-stop0 general-gate2 entrance2
+0.3094855305466238, general-gate1 ranger-stop2 ranger-stop0 general-gate2
+0.13906752411575563, entrance2 general-gate2 ranger-stop0 ranger-stop2
+0.13906752411575563, entrance4 general-gate5 general-gate2 ranger-stop0 ranger-stop2
+0.13906752411575563, general-gate5 general-gate2 ranger-stop0 ranger-stop2 general-gate1
+0.1422829581993569, ranger-stop2 ranger-stop0 general-gate2 general-gate5 entrance4
+0.1422829581993569, general-gate1 ranger-stop2 ranger-stop0 general-gate2 general-gate5
+0.16720257234726688, general-gate1 ranger-stop2 ranger-stop0 general-gate2 entrance2
+0.13906752411575563, entrance2 general-gate2 ranger-stop0 ranger-stop2 general-gate1
+0.13906752411575563, entrance4 general-gate5 general-gate2 ranger-stop0 ranger-stop2 general-gate1
+0.1422829581993569, general-gate1 ranger-stop2 ranger-stop0 general-gate2 general-gate5 entrance4

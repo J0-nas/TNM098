@@ -35,7 +35,7 @@ def freq(seq, db):
     else:
         return 0
     
-def apriori(db, minSupport):
+def apriori(db, minSupport, transitions):
     res = []
     
     candidates = []
@@ -45,15 +45,23 @@ def apriori(db, minSupport):
                 candidates.append(i)
 
     seq_list = [ [i] for i in candidates ]
+    #print(seq_list)
     freq_list = [freq(s, db) for s in seq_list]
     min_length = 2
     while len(seq_list) > 1:
         n_seq = []
         #optimization: only add allowed transitions
-        for s in seq_list:
-            for c in candidates:
-                n_seq += [s + [c]]
-            
+        if transitions is []:
+            for s in seq_list:
+                for c in candidates:
+                    n_seq += [s + [c]]
+        else:
+            for s in seq_list:
+                #print("s", s)
+                #print("t", transitions[s[-1]].keys())
+                for c in transitions[s[-1]].keys():
+                    n_seq += [s + [c]]
+                    
         freq_list = [freq(s, db) for s in n_seq]
         del_list = [ j for j, i in enumerate(freq_list) if i < minSupport ]
         seq_list = [ i for j, i in enumerate(n_seq) if j not in del_list ]
@@ -74,6 +82,8 @@ results = []
 #f_name = sys.argv[1]
 #f_name = "multi_day_paths.csv"
 f_name = "single_day_paths.csv"
+o_prefix = "single_day"
+#o_prefix = "multi_day"
 
 paths = []
 transactions = []
@@ -118,16 +128,47 @@ for key, value in transitions.items():
         print("From: ", key, " to: ", k, " - ", v)
 
 
-minsupp = 0.30
-#res = find_common_paths(transactions, minsupp)
-#s = ['general-gate3', 'camping1']
-#s = ['general-gate1', 'ranger-stop0', 'general-gate7', 'ranger-stop2', 'general-gate4']
-#s = ['general-gate7', 'general-gate7', 'general-gate4', 'general-gate1', 'ranger-stop2', 'ranger-stop0', 'general-gate2']
-#res = apriori(transactions, minsupp)
-#print(freq(s, transactions))
-#s_res = sorted(res)
-#print(s_res)
 
+
+for p in paths:
+    if p[0] == "20152501012557-10":
+        print(p)
+
+minsupp = 0.12
+
+res = apriori(transactions, minsupp, transitions)
+s_res = sorted(res)
+
+f = open(o_prefix + "_all_seq", 'w')
+print("Sorted results:")
+for r in s_res:
+    if len(r[1]) > 3:
+        print(r)
+        f.write(str(r[0]) + ', ' + " ".join(r[1]) + "\n")
+
+
+print("generate path by car_type db...")
+db_by_car_type = {}
+for p in paths:
+    if not p[1] in db_by_car_type:
+        db_by_car_type[p[1]] = [p[4]]
+    else:
+        db_by_car_type[p[1]] += [p[4]]
+
+print("Computing apriori for each car_type db...")
+car_type_seq = {}
+for k, v in db_by_car_type.items():
+    print(k, v[0])
+    car_type_seq[k] = apriori(v, minsupp, transitions)
+    print("Computed apriori for " + k)
+
+for k, v in car_type_seq.items():
+    f = open(o_prefix + "_" + str(k) + "_seq", 'w')
+    for r in v:
+        if len(r[1]) > 3:
+            f.write(str(r[0]) + ", " + " ".join(r[1]) + "\n")
+
+    
 car_id = paths[0][0]
 first_ts = paths[0][3][0]
 tz = pytz.timezone('Europe/London')
@@ -137,3 +178,4 @@ str_t = t.strftime('%Y-%m-%d %H:%M:%S')
 print(car_id, first_ts, str_t)
 print(paths[0])
 print(paths[1])
+

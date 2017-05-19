@@ -27,7 +27,7 @@ public:
     duration  = get<0>(locations.back()) - get<0>(locations.front());
   }
 
-  void initCarInfo(string id, int type) {
+  void initCarInfo(string id, string type) {
     car_id = id;
     car_type = type;
   }
@@ -51,7 +51,7 @@ public:
 
   string buildCSVString() {
     stringstream ss{};
-    ss << car_id << "," << to_string(car_type) << "," << to_string(duration);
+    ss << car_id << "," << car_type << "," << to_string(duration);
     for (auto& l : locations) {
       ss << "," << to_string(get<0>(l)) << " " << get<1>(l);
     }
@@ -62,6 +62,6 @@ public:
 private:
   int duration{};
   string car_id{};
-  int car_type{};
+  string car_type{};
   vector<tuple<int, string>> locations{};
 };
