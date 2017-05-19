@@ -1,0 +1,36 @@
+from,to
+General-gate 0,General-gate 2
+General-gate 0,Camping 1
+General-gate 0,General-gate 5
+General-gate 0,General-gate 3
+General-gate 0,Gate 3
+General-gate 0,Camping 8
+General-gate 0,Gate 4
+General-gate 0,Entrance 2
+General-gate 1,Gate 0
+General-gate 1,General-gate 4
+General-gate 1,General-gate 7
+General-gate 1,Gate 7
+General-gate 1,Gate 6
+General-gate 1,Entrance 3
+General-gate 2,Ranger-stop 0
+General-gate 2,Camping 1
+General-gate 2,General-gate 5
+General-gate 2,General-gate 3
+General-gate 2,Gate 3
+General-gate 2,Camping 8
+General-gate 2,Gate 4
+General-gate 2,Entrance 2
+Ranger-stop 0,Ranger-stop 2
+Ranger-stop 2,General-gate 1
+Ranger-stop 5,Gate 4
+Entrance 0,General-gate 1
+
+Ranger-base,Gate 8
+Gate 8,Entrance 4
+Gate 8,Camping 6
+Camping 6,Gate 5
+Gate 5,Ranger-stop 6
+Ranger-stop 6,Gate 6
+General-gate 6,Camping 7
+
