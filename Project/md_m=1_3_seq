@@ -1,0 +1,68 @@
+0.12028725314183124, camping5 camping5 general-gate7 general-gate4
+0.12028725314183124, general-gate7 camping5 camping5 general-gate7 general-gate4
+0.12028725314183124, general-gate7 camping5 general-gate7 general-gate4
+0.12567324955116696, entrance3 general-gate1 ranger-stop2 ranger-stop0
+0.12567324955116696, entrance3 general-gate1 ranger-stop2 ranger-stop0 general-gate2
+0.12836624775583483, general-gate1 ranger-stop2 ranger-stop0 general-gate2 ranger-stop0
+0.12836624775583483, general-gate1 ranger-stop2 ranger-stop0 general-gate2 ranger-stop0 ranger-stop2
+0.12836624775583483, general-gate1 ranger-stop2 ranger-stop0 general-gate2 ranger-stop0 ranger-stop2 general-gate1
+0.12836624775583483, general-gate1 ranger-stop2 ranger-stop0 ranger-stop2
+0.12836624775583483, general-gate1 ranger-stop2 ranger-stop0 ranger-stop2 general-gate1
+0.12836624775583483, ranger-stop0 general-gate2 ranger-stop0 ranger-stop2
+0.12836624775583483, ranger-stop0 general-gate2 ranger-stop0 ranger-stop2 general-gate1
+0.12836624775583483, ranger-stop2 ranger-stop0 general-gate2 ranger-stop0
+0.12836624775583483, ranger-stop2 ranger-stop0 general-gate2 ranger-stop0 ranger-stop2
+0.12836624775583483, ranger-stop2 ranger-stop0 general-gate2 ranger-stop0 ranger-stop2 general-gate1
+0.12836624775583483, ranger-stop2 ranger-stop0 ranger-stop2 general-gate1
+0.13464991023339318, entrance4 general-gate5 general-gate2 ranger-stop0 ranger-stop2 general-gate1 general-gate4
+0.13464991023339318, entrance4 general-gate5 general-gate2 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7
+0.13464991023339318, general-gate4 general-gate1 ranger-stop2 ranger-stop0 general-gate2 entrance2
+0.13464991023339318, general-gate4 general-gate1 ranger-stop2 ranger-stop0 general-gate2 general-gate5 entrance4
+0.13464991023339318, general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop0 general-gate2 entrance2
+0.13464991023339318, general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop0 general-gate2 general-gate5 entrance4
+0.13734290843806105, general-gate4 general-gate7 camping5 camping5
+0.13734290843806105, general-gate4 general-gate7 camping5 camping5 general-gate7
+0.13734290843806105, general-gate4 general-gate7 camping5 general-gate7
+0.14542190305206462, general-gate1 general-gate4 general-gate7 general-gate4
+0.14542190305206462, general-gate2 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 general-gate4
+0.14542190305206462, ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 general-gate4
+0.14542190305206462, ranger-stop2 general-gate1 general-gate4 general-gate7 general-gate4
+0.15080789946140036, general-gate4 general-gate7 general-gate4 general-gate1
+0.15080789946140036, general-gate4 general-gate7 general-gate4 general-gate1 ranger-stop2
+0.15080789946140036, general-gate4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop0
+0.15080789946140036, general-gate4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop0 general-gate2
+0.15170556552962297, general-gate5 general-gate2 ranger-stop0 ranger-stop2 general-gate1 general-gate4
+0.15170556552962297, general-gate5 general-gate2 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7
+0.15350089766606823, entrance2 general-gate2 ranger-stop0 ranger-stop2 general-gate1 general-gate4
+0.15350089766606823, entrance2 general-gate2 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7
+0.15439856373429084, general-gate4 general-gate1 ranger-stop2 ranger-stop0 general-gate2 general-gate5
+0.15439856373429084, general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop0 general-gate2 general-gate5
+0.15798922800718132, general-gate1 ranger-stop2 ranger-stop0 general-gate2 entrance2
+0.15798922800718132, ranger-stop2 ranger-stop0 general-gate2 entrance2
+0.16337522441651706, general-gate1 ranger-stop2 ranger-stop0 general-gate2 general-gate5 entrance4
+0.16337522441651706, ranger-stop0 general-gate2 general-gate5 entrance4
+0.16337522441651706, ranger-stop2 ranger-stop0 general-gate2 general-gate5 entrance4
+0.1651705565529623, entrance4 general-gate5 general-gate2 ranger-stop0
+0.1651705565529623, entrance4 general-gate5 general-gate2 ranger-stop0 ranger-stop2
+0.1651705565529623, entrance4 general-gate5 general-gate2 ranger-stop0 ranger-stop2 general-gate1
+0.1947935368043088, entrance2 general-gate2 ranger-stop0 ranger-stop2
+0.1947935368043088, entrance2 general-gate2 ranger-stop0 ranger-stop2 general-gate1
+0.21095152603231598, general-gate2 ranger-stop0 ranger-stop2 general-gate1 entrance3
+0.21095152603231598, ranger-stop0 ranger-stop2 general-gate1 entrance3
+0.2199281867145422, general-gate7 camping5 camping5 general-gate7
+0.2459605026929982, general-gate1 ranger-stop2 ranger-stop0 general-gate2 general-gate5
+0.2459605026929982, ranger-stop2 ranger-stop0 general-gate2 general-gate5
+0.2612208258527828, general-gate5 general-gate2 ranger-stop0 ranger-stop2
+0.2612208258527828, general-gate5 general-gate2 ranger-stop0 ranger-stop2 general-gate1
+0.30430879712746856, general-gate4 general-gate1 ranger-stop2 ranger-stop0
+0.30430879712746856, general-gate4 general-gate1 ranger-stop2 ranger-stop0 general-gate2
+0.30430879712746856, general-gate7 general-gate4 general-gate1 ranger-stop2
+0.30430879712746856, general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop0
+0.30430879712746856, general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop0 general-gate2
+0.31508078994614, general-gate2 ranger-stop0 ranger-stop2 general-gate1 general-gate4
+0.31508078994614, general-gate2 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7
+0.31508078994614, ranger-stop0 ranger-stop2 general-gate1 general-gate4
+0.31508078994614, ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7
+0.31508078994614, ranger-stop2 general-gate1 general-gate4 general-gate7
+0.4488330341113106, general-gate1 ranger-stop2 ranger-stop0 general-gate2
+0.4883303411131059, general-gate2 ranger-stop0 ranger-stop2 general-gate1

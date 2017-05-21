@@ -1,0 +1,7 @@
+md_m=2
+Computed All sequences in:  449.34785199165344
+Computed apriori for 3 in  88.32756686210632
+Computed apriori for 1 in  235.27050399780273
+Computed apriori for 2 in  171.6455376148224
+
+sd_m=2

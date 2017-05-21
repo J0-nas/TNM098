@@ -37,14 +37,18 @@ def freq(seq, db):
     else:
         return 0
     
-def apriori(db, minSupport, transitions, mode=1):
+def apriori(db, minSupport, transitions, mode=1, fromEntrance=False):
     res = []
     
     candidates = []
     for t in db:
         for i in t:
             if not i in candidates:
-                candidates.append(i)
+                if fromEntrance:
+                    if i.startswith('entrance'):
+                        candidates.append(i)
+                else:
+                    candidates.append(i)
 
     seq_list = [ [i] for i in candidates ]
     #print(seq_list)
@@ -79,19 +83,31 @@ def apriori(db, minSupport, transitions, mode=1):
                                 if [s + [nn_c]] not in n_seq:
                                     n_seq += [s + [nn_c]]
 
-        n_seq = [s for s in n_seq if not any(s in r for r in res)]
-        freq_list = [freq(s, db) for s in n_seq]
+        #print(len(n_seq))
+        seq = []
+        for s in n_seq:
+            if not any(s in r for r in res):
+                seq.append(s)
+        #print(len(seq))
+        freq_list = [freq(s, db) for s in seq]
         del_list = [ j for j, i in enumerate(freq_list) if i < minSupport ]
         seq_list = [ i for j, i in enumerate(n_seq) if j not in del_list ]
         freq_list = [ i for j, i in enumerate(freq_list) if j not in del_list ]
-        print("del list: ", len(del_list))
-        print("candidate list len", len(n_seq))
-        print("subres list len", len(seq_list))
+        #print("del list: ", len(del_list))
+        #print("candidate list len", len(n_seq))
+        #print("subres list len", len(seq_list))
         new_res = list(zip(freq_list, seq_list))
         #print("New results: ", new_res)
-        if (new_res != []) and (len(new_res[0][1]) >= min_length) and (new_res not in res):
+        #if (new_res != []) and (len(new_res[0][1]) >= min_length) and (new_res not in res):
             #print("New results: ", new_res)
-            res += new_res
+        #   res += new_res
+        for r in new_res:
+            if len(r[1]) >= min_length and not any(r[1] in o_r for o_r in res):
+                res.append(r)
+
+        #print("#of res:", len(res))
+        #print(new_res)
+        #print(res)
     return res
 
 def readData(f_name):
@@ -114,7 +130,7 @@ def readData(f_name):
         transactions += [loc]
     return (paths, transactions)
 
-def buildTransitionMap(paths):
+def buildTransitionMap(paths, f_name):
     transitions = {}
     for p in paths:
         for i in range(0, len(p[4])-1):
@@ -126,9 +142,11 @@ def buildTransitionMap(paths):
             else:
                 transitions[p[4][i]][p[4][i+1]] = 1
 
+    f = open(f_name, 'w')
     for key, value in transitions.items():
         for k, v in value.items():
             print("From: ", key, " to: ", k, " - ", v)
+            f.write(key + "," + k + "," + str(v) + "\n")
     return transitions
 
 def partitionDBByCar_type(paths):
@@ -140,11 +158,11 @@ def partitionDBByCar_type(paths):
             db_by_car_type[p[1]] += [p[4]]
     return db_by_car_type
 
-def computeAprioriForPartitionedDB(paths, minsupp, transitions, mode=0):
+def computeAprioriForPartitionedDB(paths, minsupp, transitions, mode=0, fromEntrance=False):
     car_type_seq = {}
     for k, v in paths.items():
         t_0 = time.time()
-        car_type_seq[k] = sorted(apriori(v, minsupp, transitions, mode))
+        car_type_seq[k] = sorted(apriori(v, minsupp, transitions, mode=mode, fromEntrance=fromEntrance))
         t_1 = time.time()
         print("Computed apriori for " + k + " in ",  t_1-t_0)
     return car_type_seq
@@ -159,21 +177,21 @@ def writeAprioriResultToFile(f_name, res):
             
 #f_name = sys.argv[1]
 f_name = "multi_day_paths.csv"
-o_prefix = "md_m=3"
+o_prefix = "md_m=1"
 #f_name = "single_day_paths.csv"
-#o_prefix = "single_day_oa"
+#o_prefix = "sd_m=1_0_12"
 
 
 paths, transactions = readData(f_name)
 
 #Build dicts of transitions
-transitions = buildTransitionMap(paths)
+transitions = buildTransitionMap(paths, o_prefix+ "_transitions")
 
-minsupp = 0.18
+minsupp = 0.12
 
 
 t_0 = time.time()
-res = sorted(apriori(transactions, minsupp, transitions, mode=2))
+res = sorted(apriori(transactions, minsupp, transitions, mode=1, fromEntrance=False))
 t_1 = time.time()
 print("Computed All sequences in: ", t_1-t_0)
 f_name = o_prefix + "_all_seq"
@@ -184,7 +202,7 @@ print("Generate paths by car_type db...")
 db_by_car_type = partitionDBByCar_type(paths)
 
 print("Computing apriori for each car_type db...")
-car_type_seq = computeAprioriForPartitionedDB(db_by_car_type, minsupp, transitions, mode=2)
+car_type_seq = computeAprioriForPartitionedDB(db_by_car_type, minsupp, transitions, mode=1, fromEntrance=False)
 
 for k, v in car_type_seq.items():
     f_name = o_prefix + "_" + str(k) + "_seq"
@@ -208,15 +226,18 @@ ax1.set_title("Paths by car_type")
 plt.show()
 """
 
+c_count = {}
+t_count = {}
+time_count = {}
+for p in paths:
+    if p[1] in t_count:
+        c_count[p[1]] += 1
+        t_count[p[1]] += len(p[4])
+        time_count[p[1]] += int(p[2])
+    else:
+        c_count[p[1]] = 1
+        t_count[p[1]] = len(p[4])
+        time_count[p[1]] = int(p[2])
 
-"""
-car_id = paths[0][0]
-first_ts = paths[0][3][0]
-tz = pytz.timezone('Europe/London')
-t = datetime.datetime.fromtimestamp(int(first_ts), tz)
-print(t.weekday())
-str_t = t.strftime('%Y-%m-%d %H:%M:%S')
-print(car_id, first_ts, str_t)
-print(paths[0])
-print(paths[1])
-"""
+for k, v in c_count.items():
+    print(k, " occured ", str(v), " times for avg. ", str(time_count[k]/v),  " visiting avg. ", str(t_count[k]/v), " checkpoints")
