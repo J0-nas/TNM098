@@ -1,0 +1,6 @@
+sd = single_day
+md = multiple_days
+
+m=1/2/3 = how many subsequent items should the apriori algorithm use
+0_xy = xy% is the threshold for the apriori algorithm
+_transitions = file contining the total transitions
