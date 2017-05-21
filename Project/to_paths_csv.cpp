@@ -28,27 +28,7 @@ int main(int argc, char** argv) {
     i --;
   }
   cout << "\tvector built" << endl;
-  
-  //cout << points.at(0).getSummary() << endl;
-  //cout << points.back().getSummary() << endl;
-  
-  /*
-  DataPoint a{2016, "i_a", 5, "check_a"};
-  DataPoint b{2016, "i_b", 6, "check_b"};
-  cout << a.getSummary() << endl;
-  cout << b.getSummary() << endl;
-  auto c = DataPoint{a};
-  cout << a.getSummary() << endl;
-  cout << c.getSummary() << endl;
-  auto d = move(a);
-  cout << a.getSummary() << endl;
-  cout << d.getSummary() << endl;
-  cout << "-----------" << endl;
-  map<string, vector<DataPoint>> m {};
-  //m["i"] = vector<DataPoint>{};
-  //m["i"].push_back(DataPoint{move(d)});
-  //cout << d.getSummary() << endl;
-  */
+
   map<string, vector<DataPoint>> m {};
   for (auto & i: points) {
     if (m.find(i.getIdentifier()) == m.end()) {
@@ -78,6 +58,7 @@ int main(int argc, char** argv) {
       }
       // Add <1 day path
     } else {
+      cout << car_id << " " << diff << endl;
       paths.push_back(Path{});
       paths.back().initCarInfo(n.second.front().getIdentifier(), n.second.front().getCarType());
       for (auto & p: n.second) {
@@ -85,7 +66,7 @@ int main(int argc, char** argv) {
       }
     }
   }
-  cout << car_id << endl;
+  //cout << car_id << endl;
   //cout << typeid(m[car_id]).name() << endl;
   //Path p{m[car_id].front()};
 

@@ -2,7 +2,9 @@ import sys
 import pytz
 import datetime
 import time
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
 
 def seq_matches_path(path, seq):
     path_i = 0
@@ -119,12 +121,12 @@ def readData(f_name):
         words = line.split(',')
         car_id = words[0]
         car_type = words[1]
-        duration = words[2]
+        duration = int(words[2])
         loc = []
         ts = []
         for i in range(3, len(words)):
             elem = words[i].split(" ")
-            ts += [elem[0]]
+            ts += [int(elem[0])]
             loc += [elem[1]]
         paths += [(car_id, car_type, duration, ts, loc)]
         transactions += [loc]
@@ -177,10 +179,10 @@ def writeAprioriResultToFile(f_name, res):
             
 #f_name = sys.argv[1]
 f_name = "multi_day_paths.csv"
-o_prefix = "md_m=1"
+o_prefix = "md_m=1_fe_0_12_"
 #f_name = "single_day_paths.csv"
-#o_prefix = "sd_m=1_0_12"
-
+#o_prefix = "sd_m=1_fe__0_12"
+fromEntrance = True
 
 paths, transactions = readData(f_name)
 
@@ -191,23 +193,23 @@ minsupp = 0.12
 
 
 t_0 = time.time()
-res = sorted(apriori(transactions, minsupp, transitions, mode=1, fromEntrance=False))
+#res = sorted(apriori(transactions, minsupp, transitions, mode=1, fromEntrance=fromEntrance))
 t_1 = time.time()
 print("Computed All sequences in: ", t_1-t_0)
 f_name = o_prefix + "_all_seq"
-writeAprioriResultToFile(f_name, res)
+#writeAprioriResultToFile(f_name, res)
 
 
 print("Generate paths by car_type db...")
 db_by_car_type = partitionDBByCar_type(paths)
 
 print("Computing apriori for each car_type db...")
-car_type_seq = computeAprioriForPartitionedDB(db_by_car_type, minsupp, transitions, mode=1, fromEntrance=False)
+"""car_type_seq = computeAprioriForPartitionedDB(db_by_car_type, minsupp, transitions, mode=1, fromEntrance=fromEntrance)
 
 for k, v in car_type_seq.items():
     f_name = o_prefix + "_" + str(k) + "_seq"
     writeAprioriResultToFile(f_name, v)
-
+"""
 
 #piechart of paths
 labs = []
@@ -229,15 +231,47 @@ plt.show()
 c_count = {}
 t_count = {}
 time_count = {}
+month_dist = {}
+tz = pytz.timezone('Europe/London')
 for p in paths:
+    t = datetime.datetime.fromtimestamp(p[3][0], tz)
     if p[1] in t_count:
         c_count[p[1]] += 1
         t_count[p[1]] += len(p[4])
         time_count[p[1]] += int(p[2])
+        month_dist[p[1]][t.month-1] += 1
     else:
         c_count[p[1]] = 1
         t_count[p[1]] = len(p[4])
         time_count[p[1]] = int(p[2])
+        month_dist[p[1]] = [0 for x in range(0,12)]
+        month_dist[p[1]][t.month-1] = 1
 
+a = []
+print(labs, month_dist.keys())
 for k, v in c_count.items():
-    print(k, " occured ", str(v), " times for avg. ", str(time_count[k]/v),  " visiting avg. ", str(t_count[k]/v), " checkpoints")
+    #print(k, " occured ", str(v), " times for avg. ", str(time_count[k]/v),  " visiting avg. ", str(t_count[k]/v), " checkpoints")
+    a += [month_dist[k]]
+    print("month_dist", k, month_dist[k])
+    
+np_a = [[] for x in range(0,12)]
+for i, x in enumerate(a):
+    #print (x, i)
+    for i, x_e in enumerate(x):
+        np_a[i].append(x_e)
+
+fig, ax1 = plt.subplots()
+ind = np.arange(12)
+width = 0.12
+axis = []
+for i, v in enumerate(a):
+    axis.append(ax1.bar(ind+width*i, v, width))
+ax1.set_title('Visits by month and car_type')
+ax1.set_ylabel('Visits')
+ax1.set_xlabel('Month')
+ax1.set_xticks(ind+width)
+ax1.set_xticklabels( [x for x in range(1,13)] )
+ax1.legend(month_dist.keys())
+plt.show()
+
+#sns.barplot(x="Months", y="Visits", data=a[0])
