@@ -29,10 +29,12 @@ def seq_matches_path(path, seq):
 def freq(seq, db):
     s = len(db)
     i = 0
+    f = open("unusual_ranger_paths.txt", 'w')
     for t in db:
         if seq_matches_path(t, seq):
             i += 1
-
+        else:
+            f.write(" ".join(t) + "\n")
     #print("found seq ",  seq, " ", i, " times - ", s)
     if (i != 0):
         return i/s
@@ -178,11 +180,12 @@ def writeAprioriResultToFile(f_name, res):
 
             
 #f_name = sys.argv[1]
-f_name = "multi_day_paths.csv"
-o_prefix = "md_m=1_fe_0_12_"
-#f_name = "single_day_paths.csv"
-#o_prefix = "sd_m=1_fe__0_12"
+#f_name = "multi_day_paths.csv"
+#o_prefix = "md_m=2_fe_0_12_"
+f_name = "single_day_paths.csv"
+o_prefix = "sd_m=2_fe_0_12"
 fromEntrance = True
+mode=2
 
 paths, transactions = readData(f_name)
 
@@ -193,7 +196,7 @@ minsupp = 0.12
 
 
 t_0 = time.time()
-#res = sorted(apriori(transactions, minsupp, transitions, mode=1, fromEntrance=fromEntrance))
+#res = sorted(apriori(transactions, minsupp, transitions, mode=mode, fromEntrance=fromEntrance))
 t_1 = time.time()
 print("Computed All sequences in: ", t_1-t_0)
 f_name = o_prefix + "_all_seq"
@@ -204,12 +207,12 @@ print("Generate paths by car_type db...")
 db_by_car_type = partitionDBByCar_type(paths)
 
 print("Computing apriori for each car_type db...")
-"""car_type_seq = computeAprioriForPartitionedDB(db_by_car_type, minsupp, transitions, mode=1, fromEntrance=fromEntrance)
+#car_type_seq = computeAprioriForPartitionedDB(db_by_car_type, minsupp, transitions, mode=mode, fromEntrance=fromEntrance)
 
-for k, v in car_type_seq.items():
-    f_name = o_prefix + "_" + str(k) + "_seq"
-    writeAprioriResultToFile(f_name, v)
-"""
+#for k, v in car_type_seq.items():
+#    f_name = o_prefix + "_" + str(k) + "_seq"
+#    writeAprioriResultToFile(f_name, v)
+
 
 #piechart of paths
 labs = []
@@ -272,6 +275,8 @@ ax1.set_xlabel('Month')
 ax1.set_xticks(ind+width)
 ax1.set_xticklabels( [x for x in range(1,13)] )
 ax1.legend(month_dist.keys())
-plt.show()
+#plt.show()
 
 #sns.barplot(x="Months", y="Visits", data=a[0])
+s = ['ranger-base', 'gate8', 'gate5', 'gate8', 'ranger-base']
+freq(s, db_by_car_type["2P"])

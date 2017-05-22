@@ -1,0 +1,22 @@
+Time for single_day_oa:
+Computed All sequences in:  16.255627870559692
+Computed apriori for 2 in  3.5834429264068604
+Computed apriori for 1 in  5.763313055038452
+Computed apriori for 2P in  171.99963474273682
+Computed apriori for 4 in  0.7856168746948242
+Computed apriori for 5 in  0.4631650447845459
+Computed apriori for 3 in  2.2804951667785645
+Computed apriori for 6 in  0.2563302516937256
+
+Time for multi_day_oa:
+Computed All sequences in:  8.663444995880127
+Computed apriori for 3 in  1.6605629920959473
+Computed apriori for 1 in  4.54377293586731
+Computed apriori for 2 in  2.6928560733795166
+
+
+Time for multi_day:
+Computed All sequences in:  396.16102719306946
+Computed apriori for 3 in  73.73532009124756
+Computed apriori for 1 in  318.8758671283722
+Computed apriori for 2 in  236.24023914337158

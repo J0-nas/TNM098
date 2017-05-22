@@ -1,0 +1,181 @@
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 general-gate1 gate0 gate1 camping4 camping4 gate1 gate0 general-gate1 ranger-stop2 ranger-stop0 general-gate2 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 camping6 camping6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 camping8 camping8 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 general-gate3 camping8 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 gate4 ranger-stop5 ranger-stop5 gate4 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 camping8 camping8 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 general-gate3 camping8 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 camping6 camping6 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 general-gate1 general-gate4 gate7 ranger-stop7 ranger-stop7 gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 camping8 camping8 general-gate5 general-gate6 camping7 camping7 general-gate6 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 camping8 camping8 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 general-gate6 camping7 camping7 general-gate6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 gate3 ranger-stop3 ranger-stop3 gate3 camping8 general-gate3 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 gate3 ranger-stop3 ranger-stop3 gate3 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 gate0 gate1 camping0 camping0 gate1 gate0 general-gate1 ranger-stop2 ranger-stop0 general-gate2 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 camping6 camping6 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 camping8 camping8 camping1 camping1 general-gate5 camping6 camping6 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 camping6 camping6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 camping6 camping6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 camping6 camping6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 camping6 camping6 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate0 camping1 camping1 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 camping8 camping8 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 camping8 camping8 general-gate3 gate4 ranger-stop5 ranger-stop5 gate4 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 camping8 camping8 general-gate2 ranger-stop0 ranger-stop2 general-gate1 gate0 gate1 camping3 camping3 gate1 gate0 general-gate1 ranger-stop2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 camping6 camping6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 camping6 camping6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 camping8 camping8 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 camping6 camping6 camping6 camping6 general-gate6 camping7 camping7 general-gate6 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 camping8 camping8 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 general-gate1 general-gate4 gate7 ranger-stop7 ranger-stop7 gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate4 ranger-stop5 ranger-stop5 gate4 general-gate3 camping8 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 camping6 camping6 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 camping8 camping8 general-gate2 ranger-stop0 ranger-stop0 ranger-stop0 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 general-gate6 camping7 camping7 general-gate6 gate4 ranger-stop5 ranger-stop5 gate4 general-gate5 general-gate2 ranger-stop0 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 camping8 camping8 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 camping6 camping6 gate4 ranger-stop5 ranger-stop5 gate4 gate8 ranger-base
+ranger-base gate8 general-gate6 camping7 camping7 general-gate6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 camping6 camping6 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 general-gate2 ranger-stop0 ranger-stop0 ranger-stop2 general-gate1 general-gate4 general-gate7 ranger-stop4 ranger-stop4 general-gate7 general-gate4 general-gate1 ranger-stop2 ranger-stop2 ranger-stop0 general-gate2 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate8 ranger-base
+ranger-base gate8 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 general-gate6 camping7 camping7 general-gate6 gate8 ranger-base
