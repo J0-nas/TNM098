@@ -279,4 +279,35 @@ ax1.legend(month_dist.keys())
 
 #sns.barplot(x="Months", y="Visits", data=a[0])
 s = ['ranger-base', 'gate8', 'gate5', 'gate8', 'ranger-base']
-freq(s, db_by_car_type["2P"])
+print(freq(s, db_by_car_type["2P"]))
+
+print("Forbidden behaviour:")
+gate_list = ["gate" + str(x) for x in range(1,9)]
+forbiddenDB = []
+p_forbidden = []
+should_be_added = False
+for p in paths:
+    if p[1] != "2P":
+        for g in gate_list:
+            if seq_matches_path(p[4], [g]):
+                #print(p)
+                should_be_added = True
+        if should_be_added:
+            forbiddenDB += [p[4]]
+            p_forbidden += [p]
+            should_be_added = False
+        if not p[4][0].startswith("entrance"):
+            print("p doesnt start at entrance: ",p)
+
+print(len(p_forbidden))
+print(len(forbiddenDB))
+
+t = sorted([datetime.datetime.fromtimestamp(p[3][0], tz) for p in p_forbidden])
+for ts in t:
+    print(ts.year, ts.month, ts.day)
+    #res = apriori(forbiddenDB, 0.4, transitions, mode=1, fromEntrance=False)
+    #writeAprioriResultToFile("sd_forbidden", res)
+
+f = open("forbidden.csv", 'w')
+for p in p_forbidden:
+    f.write(p[0] + "\n")

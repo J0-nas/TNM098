@@ -1,0 +1,179 @@
+1.0, entrance3 gate6 ranger-stop6 gate5
+1.0, entrance3 gate6 ranger-stop6 ranger-stop6
+1.0, entrance3 gate6 ranger-stop6 gate6
+1.0, gate6 ranger-stop6 gate5 general-gate5
+1.0, gate6 ranger-stop6 gate5 ranger-stop6
+1.0, gate6 ranger-stop6 ranger-stop6 gate6
+1.0, gate6 ranger-stop6 gate6 entrance3
+1.0, ranger-stop6 gate5 general-gate5 gate3
+1.0, ranger-stop6 gate5 general-gate5 gate5
+1.0, ranger-stop6 gate5 general-gate5 general-gate5
+1.0, ranger-stop6 gate5 ranger-stop6 gate6
+1.0, ranger-stop6 ranger-stop6 gate6 entrance3
+1.0, gate5 general-gate5 gate3 ranger-stop3
+1.0, gate5 general-gate5 gate3 general-gate5
+1.0, gate5 general-gate5 gate5 ranger-stop6
+1.0, gate5 general-gate5 general-gate5 gate5
+1.0, gate5 ranger-stop6 gate6 entrance3
+1.0, general-gate5 gate3 ranger-stop3 ranger-stop3
+1.0, general-gate5 gate3 ranger-stop3 gate3
+1.0, general-gate5 gate3 general-gate5 gate5
+1.0, general-gate5 gate5 ranger-stop6 gate6
+1.0, general-gate5 general-gate5 gate5 ranger-stop6
+1.0, gate3 ranger-stop3 ranger-stop3 gate3
+1.0, gate3 ranger-stop3 gate3 general-gate5
+1.0, gate3 general-gate5 gate5 ranger-stop6
+1.0, ranger-stop3 ranger-stop3 gate3 general-gate5
+1.0, ranger-stop3 gate3 general-gate5 gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 ranger-stop6
+1.0, entrance3 gate6 ranger-stop6 ranger-stop6 gate6
+1.0, entrance3 gate6 ranger-stop6 gate6 entrance3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate5
+1.0, gate6 ranger-stop6 gate5 general-gate5 general-gate5
+1.0, gate6 ranger-stop6 gate5 ranger-stop6 gate6
+1.0, gate6 ranger-stop6 ranger-stop6 gate6 entrance3
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3
+1.0, ranger-stop6 gate5 general-gate5 gate3 general-gate5
+1.0, ranger-stop6 gate5 general-gate5 gate5 ranger-stop6
+1.0, ranger-stop6 gate5 general-gate5 general-gate5 gate5
+1.0, ranger-stop6 gate5 ranger-stop6 gate6 entrance3
+1.0, gate5 general-gate5 gate3 ranger-stop3 ranger-stop3
+1.0, gate5 general-gate5 gate3 ranger-stop3 gate3
+1.0, gate5 general-gate5 gate3 general-gate5 gate5
+1.0, gate5 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate5 general-gate5 general-gate5 gate5 ranger-stop6
+1.0, general-gate5 gate3 ranger-stop3 ranger-stop3 gate3
+1.0, general-gate5 gate3 ranger-stop3 gate3 general-gate5
+1.0, general-gate5 gate3 general-gate5 gate5 ranger-stop6
+1.0, general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, general-gate5 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate3 ranger-stop3 ranger-stop3 gate3 general-gate5
+1.0, gate3 ranger-stop3 gate3 general-gate5 gate5
+1.0, gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, ranger-stop3 ranger-stop3 gate3 general-gate5 gate5
+1.0, ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 general-gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 ranger-stop6 gate6
+1.0, entrance3 gate6 ranger-stop6 ranger-stop6 gate6 entrance3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 general-gate5
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate5 ranger-stop6
+1.0, gate6 ranger-stop6 gate5 general-gate5 general-gate5 gate5
+1.0, gate6 ranger-stop6 gate5 ranger-stop6 gate6 entrance3
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3
+1.0, ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5
+1.0, ranger-stop6 gate5 general-gate5 gate5 ranger-stop6 gate6
+1.0, ranger-stop6 gate5 general-gate5 general-gate5 gate5 ranger-stop6
+1.0, gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3
+1.0, gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5
+1.0, gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6
+1.0, gate5 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate5 general-gate5 general-gate5 gate5 ranger-stop6 gate6
+1.0, general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5
+1.0, general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5
+1.0, general-gate5 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, general-gate5 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5
+1.0, gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 general-gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate5 ranger-stop6
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 general-gate5 gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 ranger-stop6 gate6 entrance3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate6 ranger-stop6 gate5 general-gate5 general-gate5 gate5 ranger-stop6
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5
+1.0, ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6
+1.0, ranger-stop6 gate5 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, ranger-stop6 gate5 general-gate5 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5
+1.0, gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5
+1.0, gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate5 general-gate5 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5
+1.0, general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, general-gate5 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate5 ranger-stop6 gate6
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 general-gate5 gate5 ranger-stop6
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate6 ranger-stop6 gate5 general-gate5 general-gate5 gate5 ranger-stop6 gate6
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5
+1.0, ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, ranger-stop6 gate5 general-gate5 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5
+1.0, gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate6 ranger-stop6 gate5 general-gate5 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
+1.0, entrance3 gate6 ranger-stop6 gate5 general-gate5 gate3 ranger-stop3 ranger-stop3 gate3 general-gate5 gate5 ranger-stop6 gate6 entrance3
