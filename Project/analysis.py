@@ -253,7 +253,7 @@ for p in paths:
 a = []
 print(labs, month_dist.keys())
 for k, v in c_count.items():
-    #print(k, " occured ", str(v), " times for avg. ", str(time_count[k]/v),  " visiting avg. ", str(t_count[k]/v), " checkpoints")
+    print(k, " occured ", str(v), " times for avg. ", str(time_count[k]/v),  " visiting avg. ", str(t_count[k]/v), " checkpoints")
     a += [month_dist[k]]
     print("month_dist", k, month_dist[k])
     
@@ -278,8 +278,11 @@ ax1.legend(month_dist.keys())
 #plt.show()
 
 #sns.barplot(x="Months", y="Visits", data=a[0])
-s = ['ranger-base', 'gate8', 'gate5', 'gate8', 'ranger-base']
-print(freq(s, db_by_car_type["2P"]))
+#s = ['ranger-base', 'gate8', 'gate5', 'gate8', 'ranger-base']
+#print(freq(s, db_by_car_type["2P"]))
+s = ["camping" + str(x) for x in range(0, 11)]
+for l in s:
+    print(l, freq([l], db_by_car_type["3"]), freq([l], db_by_car_type["4"]))
 
 print("Forbidden behaviour:")
 gate_list = ["gate" + str(x) for x in range(1,9)]
